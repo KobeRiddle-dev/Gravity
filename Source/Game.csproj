@@ -182,6 +182,7 @@
     <Compile Include="Game.Gen.cs" />
     <Compile Include="Game\ExitOnEsc.cs" />
     <Compile Include="Game\FreeCamera.cs" />
+    <Compile Include="Game\GravitySources\GravitySource.cs" />
     <Compile Visible="false" Include="D:\Game Projects\Flax Engine\Gravity\Cache\Intermediate\GameEditorTarget\Windows\x64\Debug\Game\Game.Bindings.Gen.cs" />
     <Compile Visible="false" Include="D:\Game Projects\Flax Engine\Gravity\Cache\Intermediate\GameEditorTarget\Windows\x64\Development\Game\Game.Bindings.Gen.cs" />
     <Compile Visible="false" Include="D:\Game Projects\Flax Engine\Gravity\Cache\Intermediate\GameEditorTarget\Windows\x64\Release\Game\Game.Bindings.Gen.cs" />

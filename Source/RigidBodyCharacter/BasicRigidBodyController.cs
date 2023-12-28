@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using FlaxEngine;
 
-namespace GravitySources;
+namespace RigidBodyCharacter;
 
 /// <summary>
-/// Gravity Script.
+/// BasicRigidBodyController Script.
 /// </summary>
-public class Gravity : Script
+public class BasicRigidBodyController : Script
 {
     /// <inheritdoc/>
     public override void OnStart()

@@ -1,6 +1,9 @@
 using Flax.Build;
 using Flax.Build.NativeCpp;
 
+/// <summary>
+/// 
+/// </summary>
 public class Game : GameModule
 {
     /// <inheritdoc />
