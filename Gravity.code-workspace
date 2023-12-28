@@ -1,0 +1,21 @@
+{
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off",
+		"gulp.autoDetect": "off",
+		"jake.autoDetect": "off",
+		"grunt.autoDetect": "off",
+		"omnisharp.useModernNet": true,
+		"dotnet.defaultSolution": "Gravity.sln"
+	},
+	"folders": [
+		{
+			"name": "Gravity",
+			"path": "."
+		},
+		// {
+		// 	"name": "Flax",
+		// 	"path": "D:\\Game Projects\\Flax Engine\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine"
+		// }
+	]
+}

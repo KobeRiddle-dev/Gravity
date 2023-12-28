@@ -1,0 +1,101 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "coreclr",
+			"name": "Gravity|Editor.Windows.Debug|x64 (C#)",
+			"request": "launch",
+			"preLaunchTask": "Gravity|Editor.Windows.Debug|x64",
+			"cwd": "D:\\Game Projects\\Flax Engine\\Gravity",
+			"program": "D:\\Game Projects\\Flax Engine\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Binaries\\Editor\\Win64\\Debug\\FlaxEditor",
+			"args": [
+				"-project",
+				"D:\\Game Projects\\Flax Engine\\Gravity",
+				"-skipCompile"
+			],
+			"stopAtEntry": false,
+			"externalConsole": true
+		},
+		{
+			"type": "coreclr",
+			"name": "Gravity|Editor.Windows.Development|x64 (C#)",
+			"request": "launch",
+			"preLaunchTask": "Gravity|Editor.Windows.Development|x64",
+			"cwd": "D:\\Game Projects\\Flax Engine\\Gravity",
+			"program": "D:\\Game Projects\\Flax Engine\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Binaries\\Editor\\Win64\\Development\\FlaxEditor",
+			"args": [
+				"-project",
+				"D:\\Game Projects\\Flax Engine\\Gravity",
+				"-skipCompile"
+			],
+			"stopAtEntry": false,
+			"externalConsole": true
+		},
+		{
+			"type": "coreclr",
+			"name": "Gravity|Editor.Windows.Release|x64 (C#)",
+			"request": "launch",
+			"preLaunchTask": "Gravity|Editor.Windows.Release|x64",
+			"cwd": "D:\\Game Projects\\Flax Engine\\Gravity",
+			"program": "D:\\Game Projects\\Flax Engine\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Binaries\\Editor\\Win64\\Release\\FlaxEditor",
+			"args": [
+				"-project",
+				"D:\\Game Projects\\Flax Engine\\Gravity",
+				"-skipCompile"
+			],
+			"stopAtEntry": false,
+			"externalConsole": true
+		},
+		{
+			"type": "coreclr",
+			"name": "Gravity|Game.Windows.Debug|x64 (C#)",
+			"request": "launch",
+			"preLaunchTask": "Gravity|Game.Windows.Debug|x64",
+			"cwd": "D:\\Game Projects\\Flax Engine\\Gravity",
+			"program": "D:\\Game Projects\\Flax Engine\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Binaries\\Editor\\Win64\\Debug\\FlaxEditor",
+			"args": [
+				"-project",
+				"D:\\Game Projects\\Flax Engine\\Gravity",
+				"-skipCompile"
+			],
+			"stopAtEntry": false,
+			"externalConsole": true
+		},
+		{
+			"type": "coreclr",
+			"name": "Gravity|Game.Windows.Development|x64 (C#)",
+			"request": "launch",
+			"preLaunchTask": "Gravity|Game.Windows.Development|x64",
+			"cwd": "D:\\Game Projects\\Flax Engine\\Gravity",
+			"program": "D:\\Game Projects\\Flax Engine\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Binaries\\Editor\\Win64\\Development\\FlaxEditor",
+			"args": [
+				"-project",
+				"D:\\Game Projects\\Flax Engine\\Gravity",
+				"-skipCompile"
+			],
+			"stopAtEntry": false,
+			"externalConsole": true
+		},
+		{
+			"type": "coreclr",
+			"name": "Gravity|Game.Windows.Release|x64 (C#)",
+			"request": "launch",
+			"preLaunchTask": "Gravity|Game.Windows.Release|x64",
+			"cwd": "D:\\Game Projects\\Flax Engine\\Gravity",
+			"program": "D:\\Game Projects\\Flax Engine\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Binaries\\Editor\\Win64\\Release\\FlaxEditor",
+			"args": [
+				"-project",
+				"D:\\Game Projects\\Flax Engine\\Gravity",
+				"-skipCompile"
+			],
+			"stopAtEntry": false,
+			"externalConsole": true
+		},
+		{
+			"type": "coreclr",
+			"name": "Gravity (C# Attach Editor)",
+			"request": "attach",
+			"processName": "FlaxEditor"
+		}
+	]
+}

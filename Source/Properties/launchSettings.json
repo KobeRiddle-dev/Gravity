@@ -1,0 +1,11 @@
+﻿{
+  "profiles": {
+    "Game": {
+      "commandName": "Executable",
+      "workingDirectory": "D:/Game Projects/Flax Engine/Gravity",
+      "executablePath": "D:/Game Projects/Flax Engine/Flax Engine Custom Build Master Large Worlds/FlaxEngine/Binaries/Editor/Win64/Development/FlaxEditor.exe",
+      "commandLineArgs": "-project \"D:/Game Projects/Flax Engine/Gravity\"",
+      "nativeDebugging": false
+    }
+  }
+}

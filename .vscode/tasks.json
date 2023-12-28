@@ -1,0 +1,137 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Gravity|Editor.Windows.Debug|x64",
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"command": "..\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Binaries\\Tools\\Flax.Build",
+			"args": [
+				"-build",
+				"-log",
+				"-mutex",
+				"\\\"-workspace=D:\\Game Projects\\Flax Engine\\Gravity\\\"",
+				"-arch=x64",
+				"-configuration=Debug",
+				"-platform=Windows",
+				"-buildTargets=GameEditorTarget"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Game Projects\\Flax Engine\\Gravity"
+			}
+		},
+		{
+			"label": "Gravity|Editor.Windows.Development|x64",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"command": "..\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Binaries\\Tools\\Flax.Build",
+			"args": [
+				"-build",
+				"-log",
+				"-mutex",
+				"\\\"-workspace=D:\\Game Projects\\Flax Engine\\Gravity\\\"",
+				"-arch=x64",
+				"-configuration=Development",
+				"-platform=Windows",
+				"-buildTargets=GameEditorTarget"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Game Projects\\Flax Engine\\Gravity"
+			}
+		},
+		{
+			"label": "Gravity|Editor.Windows.Release|x64",
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"command": "..\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Binaries\\Tools\\Flax.Build",
+			"args": [
+				"-build",
+				"-log",
+				"-mutex",
+				"\\\"-workspace=D:\\Game Projects\\Flax Engine\\Gravity\\\"",
+				"-arch=x64",
+				"-configuration=Release",
+				"-platform=Windows",
+				"-buildTargets=GameEditorTarget"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Game Projects\\Flax Engine\\Gravity"
+			}
+		},
+		{
+			"label": "Gravity|Game.Windows.Debug|x64",
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"command": "..\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Binaries\\Tools\\Flax.Build",
+			"args": [
+				"-build",
+				"-log",
+				"-mutex",
+				"\\\"-workspace=D:\\Game Projects\\Flax Engine\\Gravity\\\"",
+				"-arch=x64",
+				"-configuration=Debug",
+				"-platform=Windows",
+				"-buildTargets=GameTarget"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Game Projects\\Flax Engine\\Gravity"
+			}
+		},
+		{
+			"label": "Gravity|Game.Windows.Development|x64",
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"command": "..\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Binaries\\Tools\\Flax.Build",
+			"args": [
+				"-build",
+				"-log",
+				"-mutex",
+				"\\\"-workspace=D:\\Game Projects\\Flax Engine\\Gravity\\\"",
+				"-arch=x64",
+				"-configuration=Development",
+				"-platform=Windows",
+				"-buildTargets=GameTarget"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Game Projects\\Flax Engine\\Gravity"
+			}
+		},
+		{
+			"label": "Gravity|Game.Windows.Release|x64",
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"command": "..\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Binaries\\Tools\\Flax.Build",
+			"args": [
+				"-build",
+				"-log",
+				"-mutex",
+				"\\\"-workspace=D:\\Game Projects\\Flax Engine\\Gravity\\\"",
+				"-arch=x64",
+				"-configuration=Release",
+				"-platform=Windows",
+				"-buildTargets=GameTarget"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\Game Projects\\Flax Engine\\Gravity"
+			}
+		}
+	]
+}
