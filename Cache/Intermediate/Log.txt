@@ -1,55 +1,53 @@
-[00:00:006] Flax.Build 1.0.0
-[00:00:007]   Arguments: -log -mutex -genproject -vscode
-[00:00:007]   Workspace: D:\Game Projects\Flax Engine\Gravity
-[00:00:007]   Engine: D:\Game Projects\Flax Engine\Flax Engine Custom Build Master Large Worlds\FlaxEngine
-[00:00:007]   .NET 8.0.0
-[00:00:010] Loading project file from "D:\Game Projects\Flax Engine\Gravity\Gravity.flaxproj"...
-[00:00:039] Loading project file from "D:\Game Projects\Flax Engine\Flax Engine Custom Build Master Large Worlds\FlaxEngine\Flax.flaxproj"...
-[00:00:040] Loaded project Flax, version 1.7.6407.2
-[00:00:040] Loaded project Gravity, version 1.0
-[00:00:087] Engine build version: 1.7.6407.2
-[00:01:327] Assembler time: 1.2277191s
-[00:01:340] Found Android SDK at C:\Program Files (x86)\Android\android-sdk
-[00:01:341] Missing Linux Toolchain. Cannot build for Linux platform.
-[00:01:345] Found Windows SDK v10_0_22621_0 at C:\Program Files (x86)\Windows Kits\10\
-[00:01:357] Found VisualStudio2022 at C:\Program Files\Microsoft Visual Studio\2022\Community
-[00:01:357] Found VisualStudio2015 at C:\Program Files (x86)\Microsoft Visual Studio 14.0\
-[00:01:359] Found Windows toolset v140 at C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC
-[00:01:359] Found Windows toolset v143 at C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130
-[00:01:361] Generating project files...
-[00:01:400] Found VulkanSDK at: C:\VulkanSDK\1.3.268.0
-[00:01:409] Found the following .NET SDK versions: 8.0.100
-[00:01:409] Found the following .NET runtime versions: 8.0.0, 7.0.14
-[00:01:413] Using .NET SDK 8.0.100, runtime 8.0.0 (C:\Program Files\dotnet\)
-[00:01:414]   - Host Runtime for Windows x64
-[00:01:414]   - Host Runtime for Windows x86
-[00:01:414]   - Host Runtime for Windows ARM64
-[00:01:414]   - Host Runtime for Android ARM
-[00:01:414]   - Host Runtime for Android ARM64
-[00:01:414]   - Host Runtime for iOS ARM
-[00:01:414]   - Host Runtime for iOS ARM64
-[00:02:194] Flax.Build -> D:\Game Projects\Flax Engine\Flax Engine Custom Build Master Large Worlds\FlaxEngine\Source\Tools\Flax.Build\Flax.Build.csproj
-[00:02:194] Flax.Build.Tests -> D:\Game Projects\Flax Engine\Flax Engine Custom Build Master Large Worlds\FlaxEngine\Source\Tools\Flax.Build.Tests\Flax.Build.Tests.csproj
-[00:02:194] Game -> D:\Game Projects\Flax Engine\Gravity\Source\Game.
-[00:02:194] Project BuildScripts -> D:\Game Projects\Flax Engine\Gravity\Cache\Projects\BuildScripts.
-[00:02:194] Solution -> D:\Game Projects\Flax Engine\Gravity\Gravity.
-[00:02:208] Saved file to D:\Game Projects\Flax Engine\Gravity\.vscode\tasks.json
-[00:02:209] Saved file to D:\Game Projects\Flax Engine\Gravity\.vscode\launch.json
-[00:02:250] Saved file to D:\Game Projects\Flax Engine\Gravity\.vscode\c_cpp_properties.json
-[00:02:251] Saved file to D:\Game Projects\Flax Engine\Gravity\.vscode\settings.json
-[00:02:251] Saved file to D:\Game Projects\Flax Engine\Gravity\Gravity.code-workspace
-[00:02:252] Saved file to D:\Game Projects\Flax Engine\Gravity\.vscode\extensions.json
-[00:02:253] Saved file to D:\Game Projects\Flax Engine\Gravity\omnisharp.json
-[00:03:023] Flax.Build -> D:\Game Projects\Flax Engine\Flax Engine Custom Build Master Large Worlds\FlaxEngine\Source\Tools\Flax.Build\Flax.Build.csproj
-[00:03:031] Flax.Build.Tests -> D:\Game Projects\Flax Engine\Flax Engine Custom Build Master Large Worlds\FlaxEngine\Source\Tools\Flax.Build.Tests\Flax.Build.Tests.csproj
-[00:03:032] Game -> D:\Game Projects\Flax Engine\Gravity\Source\Game.csproj
-[00:03:033] Skipped saving file to D:\Game Projects\Flax Engine\Gravity\Source\Game.csproj
-[00:03:033] Project BuildScripts -> D:\Game Projects\Flax Engine\Gravity\Cache\Projects\BuildScripts.csproj
-[00:03:034] Skipped saving file to D:\Game Projects\Flax Engine\Gravity\Cache\Projects\BuildScripts.csproj
-[00:03:034] Solution -> D:\Game Projects\Flax Engine\Gravity\Gravity.sln
-[00:03:045] Saved file to D:\Game Projects\Flax Engine\Gravity\Gravity.sln
-[00:03:046] Skipped saving file to D:\Game Projects\Flax Engine\Gravity\Gravity.sln.DotSettings.user
-[00:03:046] Skipped saving file to D:\Game Projects\Flax Engine\Gravity\Cache\Projects\Flax.Build.CSharp.SkipBuild.targets
-[00:03:047] Skipped saving file to D:\Game Projects\Flax Engine\Gravity\Cache\Projects\Flax.Build.CSharp.targets
-[00:03:048] Total time: 00:00:03.0644939
-[00:03:048] End.
+[00:00:008] Flax.Build 1.0.0
+[00:00:009]   Arguments: -log -mutex -genproject
+[00:00:009]   Workspace: D:\Game Projects\Flax Engine\Gravity
+[00:00:009]   Engine: D:\Game Projects\Flax Engine\Flax Engine Custom Build Master Large Worlds\FlaxEngine
+[00:00:009]   .NET 8.0.0
+[00:00:012] Loading project file from "D:\Game Projects\Flax Engine\Gravity\Gravity.flaxproj"...
+[00:00:044] Loading project file from "D:\Game Projects\Flax Engine\Flax Engine Custom Build Master Large Worlds\FlaxEngine\Flax.flaxproj"...
+[00:00:046] Loaded project Flax, version 1.7.6407.2
+[00:00:046] Loaded project Gravity, version 1.0
+[00:00:101] Engine build version: 1.7.6407.2
+[00:00:127] Found Android SDK at C:\Program Files (x86)\Android\android-sdk
+[00:00:128] Missing Linux Toolchain. Cannot build for Linux platform.
+[00:00:132] Found Windows SDK v10_0_22621_0 at C:\Program Files (x86)\Windows Kits\10\
+[00:00:144] Found VisualStudio2022 at C:\Program Files\Microsoft Visual Studio\2022\Community
+[00:00:144] Found VisualStudio2015 at C:\Program Files (x86)\Microsoft Visual Studio 14.0\
+[00:00:145] Found Windows toolset v140 at C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC
+[00:00:145] Found Windows toolset v143 at C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130
+[00:00:147] Generating project files...
+[00:00:183] Found VulkanSDK at: C:\VulkanSDK\1.3.268.0
+[00:00:191] Found the following .NET SDK versions: 8.0.100
+[00:00:191] Found the following .NET runtime versions: 8.0.0, 7.0.14
+[00:00:194] Using .NET SDK 8.0.100, runtime 8.0.0 (C:\Program Files\dotnet\)
+[00:00:195]   - Host Runtime for Windows x64
+[00:00:195]   - Host Runtime for Windows x86
+[00:00:195]   - Host Runtime for Windows ARM64
+[00:00:195]   - Host Runtime for Android ARM
+[00:00:195]   - Host Runtime for Android ARM64
+[00:00:195]   - Host Runtime for iOS ARM
+[00:00:195]   - Host Runtime for iOS ARM64
+[00:00:986] Flax.Build -> D:\Game Projects\Flax Engine\Flax Engine Custom Build Master Large Worlds\FlaxEngine\Source\Tools\Flax.Build\Flax.Build.csproj
+[00:00:998] Flax.Build.Tests -> D:\Game Projects\Flax Engine\Flax Engine Custom Build Master Large Worlds\FlaxEngine\Source\Tools\Flax.Build.Tests\Flax.Build.Tests.csproj
+[00:00:998] Game -> D:\Game Projects\Flax Engine\Gravity\Source\Game.csproj
+[00:00:999] Skipped saving file to D:\Game Projects\Flax Engine\Gravity\Source\Game.csproj
+[00:00:999] Project BuildScripts -> D:\Game Projects\Flax Engine\Gravity\Cache\Projects\BuildScripts.csproj
+[00:01:000] Skipped saving file to D:\Game Projects\Flax Engine\Gravity\Cache\Projects\BuildScripts.csproj
+[00:01:000] Solution -> D:\Game Projects\Flax Engine\Gravity\Gravity.sln
+[00:01:012] Saved file to D:\Game Projects\Flax Engine\Gravity\Gravity.sln
+[00:01:014] Skipped saving file to D:\Game Projects\Flax Engine\Gravity\Gravity.sln.DotSettings.user
+[00:01:014] Skipped saving file to D:\Game Projects\Flax Engine\Gravity\Cache\Projects\Flax.Build.CSharp.SkipBuild.targets
+[00:01:015] Skipped saving file to D:\Game Projects\Flax Engine\Gravity\Cache\Projects\Flax.Build.CSharp.targets
+[00:02:210] Flax.Build -> D:\Game Projects\Flax Engine\Flax Engine Custom Build Master Large Worlds\FlaxEngine\Source\Tools\Flax.Build\Flax.Build.csproj
+[00:02:214] Flax.Build.Tests -> D:\Game Projects\Flax Engine\Flax Engine Custom Build Master Large Worlds\FlaxEngine\Source\Tools\Flax.Build.Tests\Flax.Build.Tests.csproj
+[00:02:215] Game -> D:\Game Projects\Flax Engine\Gravity\Source\Game.csproj
+[00:02:216] Skipped saving file to D:\Game Projects\Flax Engine\Gravity\Source\Game.csproj
+[00:02:216] Project BuildScripts -> D:\Game Projects\Flax Engine\Gravity\Cache\Projects\BuildScripts.csproj
+[00:02:217] Skipped saving file to D:\Game Projects\Flax Engine\Gravity\Cache\Projects\BuildScripts.csproj
+[00:02:217] Solution -> D:\Game Projects\Flax Engine\Gravity\Gravity.sln
+[00:02:219] Saved file to D:\Game Projects\Flax Engine\Gravity\Gravity.sln
+[00:02:221] Skipped saving file to D:\Game Projects\Flax Engine\Gravity\Gravity.sln.DotSettings.user
+[00:02:221] Skipped saving file to D:\Game Projects\Flax Engine\Gravity\Cache\Projects\Flax.Build.CSharp.SkipBuild.targets
+[00:02:221] Skipped saving file to D:\Game Projects\Flax Engine\Gravity\Cache\Projects\Flax.Build.CSharp.targets
+[00:02:224] Total time: 00:00:02.2465280
+[00:02:224] End.
