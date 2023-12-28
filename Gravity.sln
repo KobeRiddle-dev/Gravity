@@ -8,9 +8,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{75DDE40B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Source\Game.csproj", "{C63B2109-86FC-4F90-BE80-D9E871C772D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flax.Build.Tests", "..\Flax Engine Custom Build Master Large Worlds\FlaxEngine\Source\Tools\Flax.Build.Tests\Flax.Build.Tests.csproj", "{12A474BA-7FBD-47A1-B41B-D0435B63C0AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flax.Build.Tests", "..\Flax Engine Custom Build Master Large Worlds\FlaxEngine\Source\Tools\Flax.Build.Tests\Flax.Build.Tests.csproj", "{37DDE059-B598-409A-8CF8-050BEDD2F41A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flax.Build", "..\Flax Engine Custom Build Master Large Worlds\FlaxEngine\Source\Tools\Flax.Build\Flax.Build.csproj", "{7CBF3809-B6FA-443C-8096-74DDAE69DC4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flax.Build", "..\Flax Engine Custom Build Master Large Worlds\FlaxEngine\Source\Tools\Flax.Build\Flax.Build.csproj", "{7216BABB-EA37-41DF-B334-0B5D88341C74}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildScripts", "Cache\Projects\BuildScripts.csproj", "{C6627739-6911-416F-8426-891FD73DED8C}"
 EndProject
@@ -36,18 +36,18 @@ Global
 		{C63B2109-86FC-4F90-BE80-D9E871C772D6}.Game.Development|Win64.Build.0 = Game.Windows.Development|x64
 		{C63B2109-86FC-4F90-BE80-D9E871C772D6}.Game.Release|Win64.ActiveCfg = Game.Windows.Release|x64
 		{C63B2109-86FC-4F90-BE80-D9E871C772D6}.Game.Release|Win64.Build.0 = Game.Windows.Release|x64
-		{12A474BA-7FBD-47A1-B41B-D0435B63C0AA}.Editor.Debug|Win64.ActiveCfg = Debug|Any CPU
-		{12A474BA-7FBD-47A1-B41B-D0435B63C0AA}.Editor.Development|Win64.ActiveCfg = Debug|Any CPU
-		{12A474BA-7FBD-47A1-B41B-D0435B63C0AA}.Editor.Release|Win64.ActiveCfg = Debug|Any CPU
-		{12A474BA-7FBD-47A1-B41B-D0435B63C0AA}.Game.Debug|Win64.ActiveCfg = Debug|Any CPU
-		{12A474BA-7FBD-47A1-B41B-D0435B63C0AA}.Game.Development|Win64.ActiveCfg = Debug|Any CPU
-		{12A474BA-7FBD-47A1-B41B-D0435B63C0AA}.Game.Release|Win64.ActiveCfg = Debug|Any CPU
-		{7CBF3809-B6FA-443C-8096-74DDAE69DC4B}.Editor.Debug|Win64.ActiveCfg = Debug|Any CPU
-		{7CBF3809-B6FA-443C-8096-74DDAE69DC4B}.Editor.Development|Win64.ActiveCfg = Debug|Any CPU
-		{7CBF3809-B6FA-443C-8096-74DDAE69DC4B}.Editor.Release|Win64.ActiveCfg = Debug|Any CPU
-		{7CBF3809-B6FA-443C-8096-74DDAE69DC4B}.Game.Debug|Win64.ActiveCfg = Debug|Any CPU
-		{7CBF3809-B6FA-443C-8096-74DDAE69DC4B}.Game.Development|Win64.ActiveCfg = Debug|Any CPU
-		{7CBF3809-B6FA-443C-8096-74DDAE69DC4B}.Game.Release|Win64.ActiveCfg = Debug|Any CPU
+		{37DDE059-B598-409A-8CF8-050BEDD2F41A}.Editor.Debug|Win64.ActiveCfg = Debug|Any CPU
+		{37DDE059-B598-409A-8CF8-050BEDD2F41A}.Editor.Development|Win64.ActiveCfg = Debug|Any CPU
+		{37DDE059-B598-409A-8CF8-050BEDD2F41A}.Editor.Release|Win64.ActiveCfg = Debug|Any CPU
+		{37DDE059-B598-409A-8CF8-050BEDD2F41A}.Game.Debug|Win64.ActiveCfg = Debug|Any CPU
+		{37DDE059-B598-409A-8CF8-050BEDD2F41A}.Game.Development|Win64.ActiveCfg = Debug|Any CPU
+		{37DDE059-B598-409A-8CF8-050BEDD2F41A}.Game.Release|Win64.ActiveCfg = Debug|Any CPU
+		{7216BABB-EA37-41DF-B334-0B5D88341C74}.Editor.Debug|Win64.ActiveCfg = Debug|Any CPU
+		{7216BABB-EA37-41DF-B334-0B5D88341C74}.Editor.Development|Win64.ActiveCfg = Debug|Any CPU
+		{7216BABB-EA37-41DF-B334-0B5D88341C74}.Editor.Release|Win64.ActiveCfg = Debug|Any CPU
+		{7216BABB-EA37-41DF-B334-0B5D88341C74}.Game.Debug|Win64.ActiveCfg = Debug|Any CPU
+		{7216BABB-EA37-41DF-B334-0B5D88341C74}.Game.Development|Win64.ActiveCfg = Debug|Any CPU
+		{7216BABB-EA37-41DF-B334-0B5D88341C74}.Game.Release|Win64.ActiveCfg = Debug|Any CPU
 		{C6627739-6911-416F-8426-891FD73DED8C}.Editor.Debug|Win64.ActiveCfg = Debug|Any CPU
 		{C6627739-6911-416F-8426-891FD73DED8C}.Editor.Development|Win64.ActiveCfg = Debug|Any CPU
 		{C6627739-6911-416F-8426-891FD73DED8C}.Editor.Release|Win64.ActiveCfg = Debug|Any CPU
@@ -60,8 +60,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{75DDE40B-2F66-4D63-BBE8-08C781E04EE9} = {6C220ABF-A81E-4A74-B691-5F5E2353D228}
-		{12A474BA-7FBD-47A1-B41B-D0435B63C0AA} = {75DDE40B-2F66-4D63-BBE8-08C781E04EE9}
-		{7CBF3809-B6FA-443C-8096-74DDAE69DC4B} = {75DDE40B-2F66-4D63-BBE8-08C781E04EE9}
+		{37DDE059-B598-409A-8CF8-050BEDD2F41A} = {75DDE40B-2F66-4D63-BBE8-08C781E04EE9}
+		{7216BABB-EA37-41DF-B334-0B5D88341C74} = {75DDE40B-2F66-4D63-BBE8-08C781E04EE9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22E66971-E1CC-4DEC-B0D6-285BE1AF9ECA}
