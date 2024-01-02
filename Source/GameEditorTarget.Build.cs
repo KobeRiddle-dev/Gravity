@@ -11,6 +11,7 @@ public class GameEditorTarget : GameProjectEditorTarget
         base.Init();
 
         // Reference the modules for editor
+        Modules.Add("Gravity");
         Modules.Add("Game");
     }
 }

@@ -182,8 +182,8 @@ public class GravitySource : Script
 
         // Debug.Log("Object entered " + this.Actor.Name + "'s gravity: " + collider.AttachedRigidBody.Name);
 
-        GravityObject gravityObject;
-        if (collider.AttachedRigidBody.TryGetScript<GravityObject>(out gravityObject))
+        GravitySourceTracker gravityObject;
+        if (collider.AttachedRigidBody.TryGetScript<GravitySourceTracker>(out gravityObject))
             gravityObject.GravitySources.Add(this);
 
         if (collider.AttachedRigidBody != null)
@@ -194,8 +194,8 @@ public class GravitySource : Script
     {
         Debug.Log("Object exited " + this.Actor.Name + "'s gravity: " + collider.AttachedRigidBody.Name);
 
-        GravityObject gravityObject;
-        if (collider.AttachedRigidBody.TryGetScript<GravityObject>(out gravityObject))
+        GravitySourceTracker gravityObject;
+        if (collider.AttachedRigidBody.TryGetScript<GravitySourceTracker>(out gravityObject))
             gravityObject.GravitySources.Remove(this);
 
         if (collider.AttachedRigidBody != null)

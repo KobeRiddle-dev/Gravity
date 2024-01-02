@@ -11,33 +11,6 @@
         "runtime": {
           "bin/placeholder/FlaxEngine.CSharp.dll": {}
         }
-      },
-      "YAPC.CSharp/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "FlaxEngine.CSharp": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/YAPC.CSharp.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/YAPC.CSharp.dll": {}
-        }
-      },
-      "YAPCEditor.CSharp/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "FlaxEngine.CSharp": "1.0.0",
-          "YAPC.CSharp": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/YAPCEditor.CSharp.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/YAPCEditor.CSharp.dll": {}
-        }
       }
     }
   },
@@ -46,23 +19,11 @@
       "type": "project",
       "path": "../Cache/Projects/FlaxEngine.csproj",
       "msbuildProject": "../Cache/Projects/FlaxEngine.csproj"
-    },
-    "YAPC.CSharp/1.0.0": {
-      "type": "project",
-      "path": "../Plugins/YAPC/Source/YAPC.csproj",
-      "msbuildProject": "../Plugins/YAPC/Source/YAPC.csproj"
-    },
-    "YAPCEditor.CSharp/1.0.0": {
-      "type": "project",
-      "path": "../Plugins/YAPC/Source/YAPCEditor.csproj",
-      "msbuildProject": "../Plugins/YAPC/Source/YAPCEditor.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "FlaxEngine.CSharp >= 1.0.0",
-      "YAPC.CSharp >= 1.0.0",
-      "YAPCEditor.CSharp >= 1.0.0"
+      "FlaxEngine.CSharp >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -72,9 +33,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Game Projects\\Flax\\Gravity\\Source\\Game.csproj",
-      "projectName": "Game.CSharp",
-      "projectPath": "D:\\Game Projects\\Flax\\Gravity\\Source\\Game.csproj",
+      "projectUniqueName": "D:\\Game Projects\\Flax\\Gravity\\Source\\Gravity.csproj",
+      "projectName": "Gravity.CSharp",
+      "projectPath": "D:\\Game Projects\\Flax\\Gravity\\Source\\Gravity.csproj",
       "packagesPath": "C:\\Users\\kober\\.nuget\\packages\\",
       "outputPath": "D:\\Game Projects\\Flax\\Gravity\\Source\\obj\\",
       "projectStyle": "PackageReference",
@@ -100,12 +61,6 @@
           "projectReferences": {
             "D:\\Game Projects\\Flax\\Gravity\\Cache\\Projects\\FlaxEngine.csproj": {
               "projectPath": "D:\\Game Projects\\Flax\\Gravity\\Cache\\Projects\\FlaxEngine.csproj"
-            },
-            "D:\\Game Projects\\Flax\\Gravity\\Plugins\\YAPC\\Source\\YAPC.csproj": {
-              "projectPath": "D:\\Game Projects\\Flax\\Gravity\\Plugins\\YAPC\\Source\\YAPC.csproj"
-            },
-            "D:\\Game Projects\\Flax\\Gravity\\Plugins\\YAPC\\Source\\YAPCEditor.csproj": {
-              "projectPath": "D:\\Game Projects\\Flax\\Gravity\\Plugins\\YAPC\\Source\\YAPCEditor.csproj"
             }
           }
         }

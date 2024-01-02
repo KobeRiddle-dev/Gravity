@@ -19,7 +19,7 @@ namespace Gravity;
 /// <summary>
 /// BasicRigidBodyController Script.
 /// </summary>
-public class BasicRigidBodyController : GravityObject
+public class BasicRigidBodyController : GravitySourceTracker
 {
 
     /// <summary>
@@ -37,6 +37,9 @@ public class BasicRigidBodyController : GravityObject
     /// </summary>
     public Vector3 MaxFootAcceleration { get; set; } = Vector3.One * 1000;
 
+    /// <summary>
+    /// Whether or not the character is in the gravity of a GravitySource
+    /// </summary>
     [ReadOnly]
     public bool IsInGravity
     {
@@ -46,17 +49,22 @@ public class BasicRigidBodyController : GravityObject
         }
     }
 
+    /// <summary>
+    /// Whether or not the player's feet are touching the ground
+    /// </summary>
+    public bool IsGrounded
+    {
+        get
+        {
+            return Physics.SphereCast(this.Actor.Position, 10, this.rigidBody.Transform.Down, maxDistance: 300);
+        }
+    }
+
     private float pitch = 0;
 
     private float yaw = 0;
 
     private float roll = 0;
-
-
-    /// <summary>
-    /// Whether or not the player's feet are touching the ground
-    /// </summary>
-    private bool isGrounded = false;
 
     // Prefab components
     // TODO: update with RequireChildActor attribute
@@ -114,11 +122,11 @@ public class BasicRigidBodyController : GravityObject
     /// <inheritdoc/>
     public override void OnUpdate()
     {
-        this.UpdateRotation();
     }
 
     public override void OnFixedUpdate()
     {
+        this.UpdateRotation();
         this.Move();
     }
 

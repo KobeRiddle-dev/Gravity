@@ -2,6 +2,93 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
+			"type": "cppvsdbg",
+			"name": "Gravity|Editor.Windows.Debug|x64 (C++)",
+			"request": "launch",
+			"preLaunchTask": "Gravity|Editor.Windows.Debug|x64",
+			"cwd": "D:\\Game Projects\\Flax\\Gravity",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"program": "D:\\Game Projects\\Flax\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Binaries\\Editor\\Win64\\Debug\\FlaxEditor.exe",
+			"args": [
+				"-project",
+				"D:\\Game Projects\\Flax\\Gravity",
+				"-skipCompile"
+			],
+			"visualizerFile": "D:\\Game Projects\\Flax\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Source\\flax.natvis"
+		},
+		{
+			"type": "cppvsdbg",
+			"name": "Gravity|Editor.Windows.Development|x64 (C++)",
+			"request": "launch",
+			"preLaunchTask": "Gravity|Editor.Windows.Development|x64",
+			"cwd": "D:\\Game Projects\\Flax\\Gravity",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"program": "D:\\Game Projects\\Flax\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Binaries\\Editor\\Win64\\Development\\FlaxEditor.exe",
+			"args": [
+				"-project",
+				"D:\\Game Projects\\Flax\\Gravity",
+				"-skipCompile"
+			],
+			"visualizerFile": "D:\\Game Projects\\Flax\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Source\\flax.natvis"
+		},
+		{
+			"type": "cppvsdbg",
+			"name": "Gravity|Editor.Windows.Release|x64 (C++)",
+			"request": "launch",
+			"preLaunchTask": "Gravity|Editor.Windows.Release|x64",
+			"cwd": "D:\\Game Projects\\Flax\\Gravity",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"program": "D:\\Game Projects\\Flax\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Binaries\\Editor\\Win64\\Release\\FlaxEditor.exe",
+			"args": [
+				"-project",
+				"D:\\Game Projects\\Flax\\Gravity",
+				"-skipCompile"
+			],
+			"visualizerFile": "D:\\Game Projects\\Flax\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Source\\flax.natvis"
+		},
+		{
+			"type": "cppvsdbg",
+			"name": "Gravity|Game.Windows.Debug|x64 (C++)",
+			"request": "launch",
+			"preLaunchTask": "Gravity|Game.Windows.Debug|x64",
+			"cwd": "D:\\Game Projects\\Flax\\Gravity",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"program": "D:\\Game Projects\\Flax\\Gravity\\Binaries\\GameTarget\\Windows\\x64\\Debug\\Gravity.exe",
+			"args": [
+			],
+			"visualizerFile": "D:\\Game Projects\\Flax\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Source\\flax.natvis"
+		},
+		{
+			"type": "cppvsdbg",
+			"name": "Gravity|Game.Windows.Development|x64 (C++)",
+			"request": "launch",
+			"preLaunchTask": "Gravity|Game.Windows.Development|x64",
+			"cwd": "D:\\Game Projects\\Flax\\Gravity",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"program": "D:\\Game Projects\\Flax\\Gravity\\Binaries\\GameTarget\\Windows\\x64\\Development\\Gravity.exe",
+			"args": [
+			],
+			"visualizerFile": "D:\\Game Projects\\Flax\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Source\\flax.natvis"
+		},
+		{
+			"type": "cppvsdbg",
+			"name": "Gravity|Game.Windows.Release|x64 (C++)",
+			"request": "launch",
+			"preLaunchTask": "Gravity|Game.Windows.Release|x64",
+			"cwd": "D:\\Game Projects\\Flax\\Gravity",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"program": "D:\\Game Projects\\Flax\\Gravity\\Binaries\\GameTarget\\Windows\\x64\\Release\\Gravity.exe",
+			"args": [
+			],
+			"visualizerFile": "D:\\Game Projects\\Flax\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Source\\flax.natvis"
+		},
+		{
 			"type": "coreclr",
 			"name": "Gravity|Editor.Windows.Debug|x64 (C#)",
 			"request": "launch",

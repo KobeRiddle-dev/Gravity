@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6oASYrCNHPTWUUFBLY3xMwlTHhwi3ab2ei3uwZO+4oZpoq/5Lpz3mKqijyZP+V44o0KGiyIQ9weIFNqPs6xf4w==",
+  "dgSpecHash": "FYEwHuVTF6wjjigbowRHEErZS0eCZ3Iyq+kMpBH9w0zAiB3l7Lt1oxjx/k7YNziKwZTLO6/2/BK88079hZwQcQ==",
   "success": true,
-  "projectFilePath": "D:\\Game Projects\\Flax\\Gravity\\Source\\Game.csproj",
+  "projectFilePath": "D:\\Game Projects\\Flax\\Gravity\\Source\\Gravity.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -11,6 +11,7 @@ public class GameTarget : GameProjectTarget
         base.Init();
 
         // Reference the modules for game
+        Modules.Add("Gravity");
         Modules.Add("Game");
     }
 }

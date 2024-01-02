@@ -1,0 +1,92 @@
+{
+	"ID": "9ccf474147212711cd014ca87d6148de",
+	"TypeName": "FlaxEngine.SceneAsset",
+	"EngineBuild": 6407,
+	"Data": [
+		{
+			"ID": "9ccf474147212711cd014ca87d6148de",
+			"TypeName": "FlaxEngine.Scene",
+			"LightmapSettings": {
+				"IndirectLightingIntensity": 1.0,
+				"GlobalObjectsScale": 1.0,
+				"ChartsPadding": 3,
+				"AtlasSize": 1024,
+				"BounceCount": 1,
+				"CompressLightmaps": true,
+				"UseGeometryWithNoMaterials": true,
+				"Quality": 10
+			}
+		},
+		{
+			"ID": "c783173b4e250a86fe5ef9b202c6f31e",
+			"TypeName": "FlaxEngine.DirectionalLight",
+			"ParentID": "9ccf474147212711cd014ca87d6148de",
+			"Name": "Sun",
+			"Transform": {
+				"Translation": {
+					"X": 40.0,
+					"Y": 160.0,
+					"Z": 0.0
+				},
+				"Orientation": {
+					"X": 0.3826834559440613,
+					"Y": 0.0,
+					"Z": 0.0,
+					"W": 0.9238795042037964
+				}
+			}
+		},
+		{
+			"ID": "7fd1114b4a84bfea67862195ad892449",
+			"TypeName": "FlaxEngine.Sky",
+			"ParentID": "9ccf474147212711cd014ca87d6148de",
+			"Name": "Sky",
+			"Transform": {
+				"Translation": {
+					"X": 40.0,
+					"Y": 150.0,
+					"Z": 0.0
+				}
+			},
+			"Sun": "c783173b4e250a86fe5ef9b202c6f31e"
+		},
+		{
+			"ID": "4b2fe0ed4528d2497efdb0b5b7388f02",
+			"TypeName": "FlaxEngine.SkyLight",
+			"ParentID": "9ccf474147212711cd014ca87d6148de",
+			"Name": "SkyLight",
+			"Brightness": 2.5,
+			"CustomTexture": "c54410104ff39427bc11e5bc761d66b0"
+		},
+		{
+			"ID": "fbfe37f94624f77624029c97862baa1d",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "9ccf474147212711cd014ca87d6148de",
+			"Name": "Floor",
+			"Transform": {
+				"Scale": {
+					"X": 8.0,
+					"Y": 1.0,
+					"Z": 8.0
+				}
+			},
+			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "1771b53343d461faacdf2c8581b1fdbb",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "5c5121894887f74a33ef76a985ad77ec",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "fbfe37f94624f77624029c97862baa1d",
+			"Name": "BoxCollider"
+		}
+	]
+}

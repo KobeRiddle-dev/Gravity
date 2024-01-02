@@ -5,8 +5,8 @@
 		"gulp.autoDetect": "off",
 		"jake.autoDetect": "off",
 		"grunt.autoDetect": "off",
-		"omnisharp.useModernNet": true,
-		"dotnet.defaultSolution": "Gravity.sln"
+		"omnisharp.defaultLaunchSolution": "Gravity.sln",
+		"omnisharp.useModernNet": true
 	},
 	"folders": [
 		{

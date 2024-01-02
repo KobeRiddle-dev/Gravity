@@ -7,7 +7,7 @@ namespace Gravity;
 /// <summary>
 /// GravityObject Script.
 /// </summary>
-public class GravityObject : Script
+public class GravitySourceTracker : Script
 {
 
     public List<GravitySource> GravitySources { get; private set; } = new List<GravitySource>();

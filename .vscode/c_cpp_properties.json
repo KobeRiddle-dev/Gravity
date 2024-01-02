@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "Game",
+            "name": "Gravity",
             "includePath": [
                 "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/include",
                 "C:/Program Files (x86)/Windows Kits/10/include/10.0.22621.0/ucrt",
@@ -75,13 +75,6 @@
                 "AUDIO_API_OPENAL",
                 "RENDER2D_USE_LINE_AA",
                 "COMPILE_WITH_NETWORKING",
-                "CURL_STATICLIB",
-                "COMPILE_WITH_GI_BAKING",
-                "PLATFORM_TOOLS_WINDOWS",
-                "PLATFORM_TOOLS_UWP",
-                "PLATFORM_TOOLS_ANDROID",
-                "PLATFORM_TOOLS_LINUX",
-                "USE_VISUAL_STUDIO_DTE",
                 "FLAX_1",
                 "FLAX_1_7",
                 "FLAX_1_1_OR_NEWER",
@@ -90,7 +83,14 @@
                 "FLAX_1_4_OR_NEWER",
                 "FLAX_1_5_OR_NEWER",
                 "FLAX_1_6_OR_NEWER",
-                "FLAX_1_7_OR_NEWER"
+                "FLAX_1_7_OR_NEWER",
+                "CURL_STATICLIB",
+                "COMPILE_WITH_GI_BAKING",
+                "PLATFORM_TOOLS_WINDOWS",
+                "PLATFORM_TOOLS_UWP",
+                "PLATFORM_TOOLS_ANDROID",
+                "PLATFORM_TOOLS_LINUX",
+                "USE_VISUAL_STUDIO_DTE"
             ],
             "compilerPath": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
             "cStandard": "c17",

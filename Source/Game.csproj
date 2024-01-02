@@ -189,17 +189,20 @@
 
   <ItemGroup>
     <Compile Include="Game.Gen.cs" />
-    <Compile Include="Game\BasicRigidBodyController.cs" />
     <Compile Include="Game\ExitOnEsc.cs" />
     <Compile Include="Game\FreeCamera.cs" />
-    <Compile Include="Game\GravityObject.cs" />
-    <Compile Include="Game\GravitySource.cs" />
     <Compile Include="Game\PlayerScript.cs" />
+    <Compile Visible="false" Include="D:\Game Projects\Flax\Gravity\Cache\Intermediate\GameEditorTarget\Windows\x64\Debug\Gravity\Gravity.Bindings.Gen.cs" />
     <Compile Visible="false" Include="D:\Game Projects\Flax\Gravity\Cache\Intermediate\GameEditorTarget\Windows\x64\Debug\Game\Game.Bindings.Gen.cs" />
+    <Compile Visible="false" Include="D:\Game Projects\Flax\Gravity\Cache\Intermediate\GameEditorTarget\Windows\x64\Development\Gravity\Gravity.Bindings.Gen.cs" />
     <Compile Visible="false" Include="D:\Game Projects\Flax\Gravity\Cache\Intermediate\GameEditorTarget\Windows\x64\Development\Game\Game.Bindings.Gen.cs" />
+    <Compile Visible="false" Include="D:\Game Projects\Flax\Gravity\Cache\Intermediate\GameEditorTarget\Windows\x64\Release\Gravity\Gravity.Bindings.Gen.cs" />
     <Compile Visible="false" Include="D:\Game Projects\Flax\Gravity\Cache\Intermediate\GameEditorTarget\Windows\x64\Release\Game\Game.Bindings.Gen.cs" />
+    <Compile Visible="false" Include="D:\Game Projects\Flax\Gravity\Cache\Intermediate\GameTarget\Windows\x64\Debug\Gravity\Gravity.Bindings.Gen.cs" />
     <Compile Visible="false" Include="D:\Game Projects\Flax\Gravity\Cache\Intermediate\GameTarget\Windows\x64\Debug\Game\Game.Bindings.Gen.cs" />
+    <Compile Visible="false" Include="D:\Game Projects\Flax\Gravity\Cache\Intermediate\GameTarget\Windows\x64\Development\Gravity\Gravity.Bindings.Gen.cs" />
     <Compile Visible="false" Include="D:\Game Projects\Flax\Gravity\Cache\Intermediate\GameTarget\Windows\x64\Development\Game\Game.Bindings.Gen.cs" />
+    <Compile Visible="false" Include="D:\Game Projects\Flax\Gravity\Cache\Intermediate\GameTarget\Windows\x64\Release\Gravity\Gravity.Bindings.Gen.cs" />
     <Compile Visible="false" Include="D:\Game Projects\Flax\Gravity\Cache\Intermediate\GameTarget\Windows\x64\Release\Game\Game.Bindings.Gen.cs" />
   </ItemGroup>
 </Project>
