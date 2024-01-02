@@ -1,0 +1,108 @@
+{
+	"ID": "55c5cffe45137a8d25396eafbfe99c1f",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6407,
+	"Data": [
+	{
+		"ID": "b5b6b9374aae97b4ed1427b0e85c7066",
+		"TypeName": "FlaxEngine.RigidBody",
+		"Name": "RigidBodyPlayer",
+		"OverrideMass": true,
+		"Mass": 60.0,
+		"Constraints": 5,
+		"UseCCD": true
+	},
+	{
+		"ID": "2fa783e449903fb734e03ba64ced9c04",
+		"TypeName": "Gravity.BasicRigidBodyController",
+		"ParentID": "b5b6b9374aae97b4ed1427b0e85c7066",
+		"V": {}
+	},
+	{
+		"ID": "f69371a448ba4face8ea7ebf1fcd07b9",
+		"TypeName": "FlaxEngine.CapsuleCollider",
+		"ParentID": "b5b6b9374aae97b4ed1427b0e85c7066",
+		"Name": "CapsuleCollider",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": 50.0,
+				"Z": 0.0
+			},
+			"Orientation": {
+				"X": 0.0,
+				"Y": 0.0,
+				"Z": 0.7071068286895752,
+				"W": 0.7071068286895752
+			}
+		},
+		"Radius": 25.0,
+		"Height": 50.0
+	},
+	{
+		"ID": "0ec4e1574a52048f47808983b9dad528",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "b5b6b9374aae97b4ed1427b0e85c7066",
+		"Name": "Model",
+		"Model": "3f82e57744f57c28285150b646ad2198",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "30bef5da4baecb49ac024e816297c39b",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "b5b6b9374aae97b4ed1427b0e85c7066",
+		"Name": "Head",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": 76.97850036621094,
+				"Z": 25.13850212097168
+			},
+			"Scale": {
+				"X": 0.37526121735572817,
+				"Y": 0.1667478084564209,
+				"Z": 0.25
+			}
+		},
+		"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "8cb03d22470a93772a223499894e0a25",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "cbd112e94a2e387b4a186080a47d852d",
+		"TypeName": "FlaxEngine.Camera",
+		"ParentID": "30bef5da4baecb49ac024e816297c39b",
+		"Name": "Camera",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": 0.0,
+				"Z": 13.690669059753418
+			}
+		}
+	},
+	{
+		"ID": "6f78cd18404bcb5d84a4bf91af5b5367",
+		"TypeName": "FlaxEngine.AudioListener",
+		"ParentID": "30bef5da4baecb49ac024e816297c39b",
+		"Name": "AudioListener"
+	}
+]
+}

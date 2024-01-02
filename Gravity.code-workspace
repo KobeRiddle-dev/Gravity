@@ -13,9 +13,9 @@
 			"name": "Gravity",
 			"path": "."
 		},
-		// {
-		// 	"name": "Flax",
-		// 	"path": "D:\\Game Projects\\Flax Engine\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine"
-		// }
+		{
+			"name": "Flax",
+			"path": "D:\\Game Projects\\Flax\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine"
+		}
 	]
 }

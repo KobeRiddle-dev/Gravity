@@ -20,7 +20,7 @@
     <AssemblyName>Game.CSharp</AssemblyName>
     <LangVersion>12.0</LangVersion>
     <FileAlignment>512</FileAlignment>
-    <CustomAfterMicrosoftCommonTargets>$(MSBuildThisFileDirectory)..\Cache\Projects\Flax.Build.CSharp.targets</CustomAfterMicrosoftCommonTargets>
+    <CustomAfterMicrosoftCommonTargets>$(MSBuildThisFileDirectory)..\Cache\Projects\Flax.Build.CSharp.SkipBuild.targets</CustomAfterMicrosoftCommonTargets>
     <RestorePackages>false</RestorePackages>
     <DisableFastUpToDateCheck>True</DisableFastUpToDateCheck>
   </PropertyGroup>
@@ -173,21 +173,33 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="FlaxEngine.CSharp">
-      <HintPath>..\..\Flax Engine Custom Build Master Large Worlds\FlaxEngine\Binaries\Editor\Win64\Development\FlaxEngine.CSharp.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\Cache\Projects\FlaxEngine.csproj">
+      <Project>{17382D0E-E739-470F-935E-FBF71FEFB337}</Project>
+      <Name>FlaxEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Plugins\YAPC\Source\YAPCEditor.csproj">
+      <Project>{BD22BB72-2610-45A6-A658-1C1B92EF7F0F}</Project>
+      <Name>YAPCEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Plugins\YAPC\Source\YAPC.csproj">
+      <Project>{3E8EA2D1-80FA-428A-9714-724E65C9D25E}</Project>
+      <Name>YAPC</Name>
+    </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>
     <Compile Include="Game.Gen.cs" />
+    <Compile Include="Game\BasicRigidBodyController.cs" />
     <Compile Include="Game\ExitOnEsc.cs" />
     <Compile Include="Game\FreeCamera.cs" />
-    <Compile Include="Game\GravitySources\GravitySource.cs" />
-    <Compile Visible="false" Include="D:\Game Projects\Flax Engine\Gravity\Cache\Intermediate\GameEditorTarget\Windows\x64\Debug\Game\Game.Bindings.Gen.cs" />
-    <Compile Visible="false" Include="D:\Game Projects\Flax Engine\Gravity\Cache\Intermediate\GameEditorTarget\Windows\x64\Development\Game\Game.Bindings.Gen.cs" />
-    <Compile Visible="false" Include="D:\Game Projects\Flax Engine\Gravity\Cache\Intermediate\GameEditorTarget\Windows\x64\Release\Game\Game.Bindings.Gen.cs" />
-    <Compile Visible="false" Include="D:\Game Projects\Flax Engine\Gravity\Cache\Intermediate\GameTarget\Windows\x64\Debug\Game\Game.Bindings.Gen.cs" />
-    <Compile Visible="false" Include="D:\Game Projects\Flax Engine\Gravity\Cache\Intermediate\GameTarget\Windows\x64\Development\Game\Game.Bindings.Gen.cs" />
-    <Compile Visible="false" Include="D:\Game Projects\Flax Engine\Gravity\Cache\Intermediate\GameTarget\Windows\x64\Release\Game\Game.Bindings.Gen.cs" />
+    <Compile Include="Game\GravityObject.cs" />
+    <Compile Include="Game\GravitySource.cs" />
+    <Compile Include="Game\PlayerScript.cs" />
+    <Compile Visible="false" Include="D:\Game Projects\Flax\Gravity\Cache\Intermediate\GameEditorTarget\Windows\x64\Debug\Game\Game.Bindings.Gen.cs" />
+    <Compile Visible="false" Include="D:\Game Projects\Flax\Gravity\Cache\Intermediate\GameEditorTarget\Windows\x64\Development\Game\Game.Bindings.Gen.cs" />
+    <Compile Visible="false" Include="D:\Game Projects\Flax\Gravity\Cache\Intermediate\GameEditorTarget\Windows\x64\Release\Game\Game.Bindings.Gen.cs" />
+    <Compile Visible="false" Include="D:\Game Projects\Flax\Gravity\Cache\Intermediate\GameTarget\Windows\x64\Debug\Game\Game.Bindings.Gen.cs" />
+    <Compile Visible="false" Include="D:\Game Projects\Flax\Gravity\Cache\Intermediate\GameTarget\Windows\x64\Development\Game\Game.Bindings.Gen.cs" />
+    <Compile Visible="false" Include="D:\Game Projects\Flax\Gravity\Cache\Intermediate\GameTarget\Windows\x64\Release\Game\Game.Bindings.Gen.cs" />
   </ItemGroup>
 </Project>

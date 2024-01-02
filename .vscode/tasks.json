@@ -12,7 +12,7 @@
 				"-build",
 				"-log",
 				"-mutex",
-				"\\\"-workspace=D:\\Game Projects\\Flax Engine\\Gravity\\\"",
+				"\\\"-workspace=D:\\Game Projects\\Flax\\Gravity\\\"",
 				"-arch=x64",
 				"-configuration=Debug",
 				"-platform=Windows",
@@ -20,7 +20,7 @@
 			],
 			"type": "shell",
 			"options": {
-				"cwd": "D:\\Game Projects\\Flax Engine\\Gravity"
+				"cwd": "D:\\Game Projects\\Flax\\Gravity"
 			}
 		},
 		{
@@ -34,7 +34,7 @@
 				"-build",
 				"-log",
 				"-mutex",
-				"\\\"-workspace=D:\\Game Projects\\Flax Engine\\Gravity\\\"",
+				"\\\"-workspace=D:\\Game Projects\\Flax\\Gravity\\\"",
 				"-arch=x64",
 				"-configuration=Development",
 				"-platform=Windows",
@@ -42,7 +42,7 @@
 			],
 			"type": "shell",
 			"options": {
-				"cwd": "D:\\Game Projects\\Flax Engine\\Gravity"
+				"cwd": "D:\\Game Projects\\Flax\\Gravity"
 			}
 		},
 		{
@@ -56,7 +56,7 @@
 				"-build",
 				"-log",
 				"-mutex",
-				"\\\"-workspace=D:\\Game Projects\\Flax Engine\\Gravity\\\"",
+				"\\\"-workspace=D:\\Game Projects\\Flax\\Gravity\\\"",
 				"-arch=x64",
 				"-configuration=Release",
 				"-platform=Windows",
@@ -64,7 +64,7 @@
 			],
 			"type": "shell",
 			"options": {
-				"cwd": "D:\\Game Projects\\Flax Engine\\Gravity"
+				"cwd": "D:\\Game Projects\\Flax\\Gravity"
 			}
 		},
 		{
@@ -78,7 +78,7 @@
 				"-build",
 				"-log",
 				"-mutex",
-				"\\\"-workspace=D:\\Game Projects\\Flax Engine\\Gravity\\\"",
+				"\\\"-workspace=D:\\Game Projects\\Flax\\Gravity\\\"",
 				"-arch=x64",
 				"-configuration=Debug",
 				"-platform=Windows",
@@ -86,7 +86,7 @@
 			],
 			"type": "shell",
 			"options": {
-				"cwd": "D:\\Game Projects\\Flax Engine\\Gravity"
+				"cwd": "D:\\Game Projects\\Flax\\Gravity"
 			}
 		},
 		{
@@ -100,7 +100,7 @@
 				"-build",
 				"-log",
 				"-mutex",
-				"\\\"-workspace=D:\\Game Projects\\Flax Engine\\Gravity\\\"",
+				"\\\"-workspace=D:\\Game Projects\\Flax\\Gravity\\\"",
 				"-arch=x64",
 				"-configuration=Development",
 				"-platform=Windows",
@@ -108,7 +108,7 @@
 			],
 			"type": "shell",
 			"options": {
-				"cwd": "D:\\Game Projects\\Flax Engine\\Gravity"
+				"cwd": "D:\\Game Projects\\Flax\\Gravity"
 			}
 		},
 		{
@@ -122,7 +122,7 @@
 				"-build",
 				"-log",
 				"-mutex",
-				"\\\"-workspace=D:\\Game Projects\\Flax Engine\\Gravity\\\"",
+				"\\\"-workspace=D:\\Game Projects\\Flax\\Gravity\\\"",
 				"-arch=x64",
 				"-configuration=Release",
 				"-platform=Windows",
@@ -130,7 +130,7 @@
 			],
 			"type": "shell",
 			"options": {
-				"cwd": "D:\\Game Projects\\Flax Engine\\Gravity"
+				"cwd": "D:\\Game Projects\\Flax\\Gravity"
 			}
 		}
 	]

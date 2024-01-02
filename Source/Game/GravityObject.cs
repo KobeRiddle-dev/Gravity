@@ -2,19 +2,23 @@
 using System.Collections.Generic;
 using FlaxEngine;
 
-namespace RigidBodyCharacter;
+namespace Gravity;
 
 /// <summary>
-/// BasicRigidBodyController Script.
+/// GravityObject Script.
 /// </summary>
-public class BasicRigidBodyController : Script
+public class GravityObject : Script
 {
+
+    public List<GravitySource> GravitySources { get; private set; } = new List<GravitySource>();
+
+
     /// <inheritdoc/>
     public override void OnStart()
     {
         // Here you can add code that needs to be called when script is created, just before the first game update
     }
-    
+
     /// <inheritdoc/>
     public override void OnEnable()
     {

@@ -1,11 +1,18 @@
 {
 	"ID": "74a68a984824b4510d12589f199ad68f",
 	"TypeName": "FlaxEngine.SceneAsset",
-	"EngineBuild": 6333,
+	"EngineBuild": 6407,
 	"Data": [
 		{
 			"ID": "74a68a984824b4510d12589f199ad68f",
 			"TypeName": "FlaxEngine.Scene",
+			"Lightmaps": [
+				{
+					"Lightmap0": "1cb4879d4eeba57f8c616cb7ab698347",
+					"Lightmap1": "86596aaf4e4d27f75d9853941697651d",
+					"Lightmap2": "6d6fb9e449657605343c3fa7aa8a3469"
+				}
+			],
 			"LightmapSettings": {
 				"IndirectLightingIntensity": 1.0,
 				"GlobalObjectsScale": 1.0,
@@ -99,32 +106,6 @@
 			"Mode": 0
 		},
 		{
-			"ID": "b0d72c3746caebca055e1f921ca21c7c",
-			"TypeName": "FlaxEngine.Camera",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Name": "Camera",
-			"Transform": {
-				"Translation": {
-					"X": -198.75326538085938,
-					"Y": 196.89071655273438,
-					"Z": 190.70037841796876
-				},
-				"Orientation": {
-					"X": 0.06189095228910446,
-					"Y": 0.9198267459869385,
-					"Z": -0.1617070734500885,
-					"W": 0.35204988718032839
-				}
-			},
-			"StaticFlags": 0
-		},
-		{
-			"ID": "9053ad38428b10594c741db78d7fcca5",
-			"TypeName": "FreeCamera",
-			"ParentID": "b0d72c3746caebca055e1f921ca21c7c",
-			"V": {}
-		},
-		{
 			"ID": "4a9d87134ab42f4294db6bbcf1902bde",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
@@ -137,6 +118,17 @@
 				}
 			},
 			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
+			"LightmapIndex": 0,
+			"LightmapArea": {
+				"Location": {
+					"X": 0.0029296875,
+					"Y": 0.0029296875
+				},
+				"Size": {
+					"X": 0.1669921875,
+					"Y": 0.1669921875
+				}
+			},
 			"Buffer": {
 				"Entries": [
 					{
@@ -149,10 +141,36 @@
 			}
 		},
 		{
+			"ID": "8a0a58684a72fe5ebb89c29c56c993a5",
+			"TypeName": "Gravity.GravitySource",
+			"ParentID": "4a9d87134ab42f4294db6bbcf1902bde",
+			"V": {},
+			"Enabled": false
+		},
+		{
 			"ID": "4a7045e748c74e3de29afd8856f99205",
 			"TypeName": "FlaxEngine.BoxCollider",
 			"ParentID": "4a9d87134ab42f4294db6bbcf1902bde",
 			"Name": "BoxCollider"
+		},
+		{
+			"ID": "565ce0a34b10e1023b8e399e5b185232",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "4a9d87134ab42f4294db6bbcf1902bde",
+			"Name": "GravityVolume",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": 950.4932861328125,
+					"Z": 0.0
+				}
+			},
+			"IsTrigger": true,
+			"Size": {
+				"X": 100.0,
+				"Y": 2000.0,
+				"Z": 100.0
+			}
 		},
 		{
 			"ID": "e1c92bcc4eb069c29f0a5e9c605ec5ef",
@@ -167,6 +185,17 @@
 				}
 			},
 			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
+			"LightmapIndex": 0,
+			"LightmapArea": {
+				"Location": {
+					"X": 0.0302734375,
+					"Y": 0.1728515625
+				},
+				"Size": {
+					"X": 0.0244140625,
+					"Y": 0.0244140625
+				}
+			},
 			"Buffer": {
 				"Entries": [
 					{
@@ -183,6 +212,132 @@
 			"TypeName": "FlaxEngine.BoxCollider",
 			"ParentID": "e1c92bcc4eb069c29f0a5e9c605ec5ef",
 			"Name": "BoxCollider"
+		},
+		{
+			"ID": "22c499294afc2c3c69d4fc86a2e0a58b",
+			"TypeName": "FlaxEngine.RigidBody",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "Test Planet RigidBody",
+			"Transform": {
+				"Translation": {
+					"X": 141.56321716308595,
+					"Y": 128.3096923828125,
+					"Z": 1667.787109375
+				},
+				"Scale": {
+					"X": 2.0,
+					"Y": 2.0,
+					"Z": 2.0
+				}
+			},
+			"OverrideMass": true,
+			"Mass": 4899999842304.0,
+			"EnableGravity": false
+		},
+		{
+			"ID": "f884996a4be9b39402a08dae32b3a192",
+			"TypeName": "Gravity.GravitySource",
+			"ParentID": "22c499294afc2c3c69d4fc86a2e0a58b",
+			"V": {
+	"rigidBody": "22c499294afc2c3c69d4fc86a2e0a58b",
+	"GravitationalBoundCollider": "8009f91543070a56c84cc69b37a687ae",
+	"GForce": 1.9999999,
+	"SurfaceGravity": 1959.9999,
+	"SurfaceRadius": 500.0,
+	"Mass": 4.9E+12
+}
+		},
+		{
+			"ID": "6637966a4d92ec55b6b7c6864961e599",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "22c499294afc2c3c69d4fc86a2e0a58b",
+			"Name": "Test Planet",
+			"Model": "dd86c4724bf734c4959d23b3c74faa05",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "8009f91543070a56c84cc69b37a687ae",
+			"TypeName": "FlaxEngine.SphereCollider",
+			"ParentID": "22c499294afc2c3c69d4fc86a2e0a58b",
+			"Name": "GravityVolume",
+			"IsTrigger": true,
+			"Radius": 100.0
+		},
+		{
+			"ID": "cee3853e49c780afdb4fe4a6bd284769",
+			"TypeName": "FlaxEngine.SphereCollider",
+			"ParentID": "22c499294afc2c3c69d4fc86a2e0a58b",
+			"Name": "SurfaceCollider"
+		},
+		{
+			"ID": "5eb550944ce02a39e02c5c92555fd5e0",
+			"PrefabID": "55c5cffe45137a8d25396eafbfe99c1f",
+			"PrefabObjectID": "b5b6b9374aae97b4ed1427b0e85c7066",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Transform": {
+				"Translation": {
+					"X": 167.31813049316407,
+					"Y": 48.0214958190918,
+					"Z": -318.95574951171877
+				}
+			},
+			"Constraints": 0
+		},
+		{
+			"ID": "3d109d29446914f7c412f9a3471cd763",
+			"PrefabID": "55c5cffe45137a8d25396eafbfe99c1f",
+			"PrefabObjectID": "2fa783e449903fb734e03ba64ced9c04",
+			"ParentID": "5eb550944ce02a39e02c5c92555fd5e0",
+			"V": {}
+		},
+		{
+			"ID": "733f26424865befb3f868fb7734a83de",
+			"PrefabID": "55c5cffe45137a8d25396eafbfe99c1f",
+			"PrefabObjectID": "f69371a448ba4face8ea7ebf1fcd07b9",
+			"ParentID": "5eb550944ce02a39e02c5c92555fd5e0"
+		},
+		{
+			"ID": "e3a2554e4b5fd532b43aa0bafdb50fe4",
+			"PrefabID": "55c5cffe45137a8d25396eafbfe99c1f",
+			"PrefabObjectID": "0ec4e1574a52048f47808983b9dad528",
+			"ParentID": "5eb550944ce02a39e02c5c92555fd5e0",
+			"Buffer": {
+				"Entries": [
+					{}
+				]
+			}
+		},
+		{
+			"ID": "efc4015240dd1cc69ecf63aa3d338223",
+			"PrefabID": "55c5cffe45137a8d25396eafbfe99c1f",
+			"PrefabObjectID": "30bef5da4baecb49ac024e816297c39b",
+			"ParentID": "5eb550944ce02a39e02c5c92555fd5e0",
+			"Buffer": {
+				"Entries": [
+					{}
+				]
+			}
+		},
+		{
+			"ID": "4c20c4134cbec8ce99a0c69117e73878",
+			"PrefabID": "55c5cffe45137a8d25396eafbfe99c1f",
+			"PrefabObjectID": "cbd112e94a2e387b4a186080a47d852d",
+			"ParentID": "efc4015240dd1cc69ecf63aa3d338223"
+		},
+		{
+			"ID": "8e4e6bc1432fdd3dab9997b7a9022535",
+			"PrefabID": "55c5cffe45137a8d25396eafbfe99c1f",
+			"PrefabObjectID": "6f78cd18404bcb5d84a4bf91af5b5367",
+			"ParentID": "efc4015240dd1cc69ecf63aa3d338223"
 		}
 	]
 }

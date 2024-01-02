@@ -1,5 +1,8 @@
 using Flax.Build;
 
+/// <summary>
+/// 
+/// </summary>
 public class GameTarget : GameProjectTarget
 {
     /// <inheritdoc />
