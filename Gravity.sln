@@ -1,4 +1,4 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31314.256
 MinimumVisualStudioVersion = 10.0.40219.1
@@ -7,8 +7,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{75DDE40B-2F66-4D63-BBE8-08C781E04EE9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{B6E18065-E002-4B69-8BC5-D9F16DA918EF}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "YAPC", "YAPC", "{647BD066-5C98-41DB-9F8F-6573086686D5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gravity", "Source\Gravity.csproj", "{92C58FBD-36EA-4458-92C7-939FC4F6A6E6}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -20,17 +18,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flax.Build", "..\Flax Engine Custom Build Master Large Worlds\FlaxEngine\Source\Tools\Flax.Build\Flax.Build.csproj", "{FDAA1569-72F5-4B6E-AB84-58F9A75B4D5E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flax.Build.Tests", "..\Flax Engine Custom Build Master Large Worlds\FlaxEngine\Source\Tools\Flax.Build.Tests\Flax.Build.Tests.csproj", "{7740D7B4-16AF-4EEC-B36F-329A2AE02A2A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YAPC", "Plugins\YAPC\Source\YAPC.csproj", "{3E8EA2D1-80FA-428A-9714-724E65C9D25E}"
-	ProjectSection(ProjectDependencies) = postProject
-		{17382D0E-E739-470F-935E-FBF71FEFB337} = {17382D0E-E739-470F-935E-FBF71FEFB337}
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YAPCEditor", "Plugins\YAPC\Source\YAPCEditor.csproj", "{BD22BB72-2610-45A6-A658-1C1B92EF7F0F}"
-	ProjectSection(ProjectDependencies) = postProject
-		{17382D0E-E739-470F-935E-FBF71FEFB337} = {17382D0E-E739-470F-935E-FBF71FEFB337}
-		{3E8EA2D1-80FA-428A-9714-724E65C9D25E} = {3E8EA2D1-80FA-428A-9714-724E65C9D25E}
-	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Flax", "Cache\Projects\Flax.vcxproj", "{241847E8-A2C4-44C5-BE64-7C9E416FB67E}"
 EndProject
@@ -95,32 +82,6 @@ Global
 		{7740D7B4-16AF-4EEC-B36F-329A2AE02A2A}.Game.Development|Win64.ActiveCfg = Debug|Any CPU
 		{7740D7B4-16AF-4EEC-B36F-329A2AE02A2A}.Game.Release|Win64.ActiveCfg = Debug|Any CPU
 		{7740D7B4-16AF-4EEC-B36F-329A2AE02A2A}.Tests.Development|Win64.ActiveCfg = Debug|Any CPU
-		{3E8EA2D1-80FA-428A-9714-724E65C9D25E}.Editor.Debug|Win64.ActiveCfg = Editor.Windows.Debug|x64
-		{3E8EA2D1-80FA-428A-9714-724E65C9D25E}.Editor.Debug|Win64.Build.0 = Editor.Windows.Debug|x64
-		{3E8EA2D1-80FA-428A-9714-724E65C9D25E}.Editor.Development|Win64.ActiveCfg = Editor.Windows.Development|x64
-		{3E8EA2D1-80FA-428A-9714-724E65C9D25E}.Editor.Development|Win64.Build.0 = Editor.Windows.Development|x64
-		{3E8EA2D1-80FA-428A-9714-724E65C9D25E}.Editor.Release|Win64.ActiveCfg = Editor.Windows.Release|x64
-		{3E8EA2D1-80FA-428A-9714-724E65C9D25E}.Editor.Release|Win64.Build.0 = Editor.Windows.Release|x64
-		{3E8EA2D1-80FA-428A-9714-724E65C9D25E}.Game.Debug|Win64.ActiveCfg = Game.Windows.Debug|x64
-		{3E8EA2D1-80FA-428A-9714-724E65C9D25E}.Game.Debug|Win64.Build.0 = Game.Windows.Debug|x64
-		{3E8EA2D1-80FA-428A-9714-724E65C9D25E}.Game.Development|Win64.ActiveCfg = Game.Windows.Development|x64
-		{3E8EA2D1-80FA-428A-9714-724E65C9D25E}.Game.Development|Win64.Build.0 = Game.Windows.Development|x64
-		{3E8EA2D1-80FA-428A-9714-724E65C9D25E}.Game.Release|Win64.ActiveCfg = Game.Windows.Release|x64
-		{3E8EA2D1-80FA-428A-9714-724E65C9D25E}.Game.Release|Win64.Build.0 = Game.Windows.Release|x64
-		{3E8EA2D1-80FA-428A-9714-724E65C9D25E}.Tests.Development|Win64.ActiveCfg = Editor.Windows.Debug|x64
-		{BD22BB72-2610-45A6-A658-1C1B92EF7F0F}.Editor.Debug|Win64.ActiveCfg = Editor.Windows.Debug|x64
-		{BD22BB72-2610-45A6-A658-1C1B92EF7F0F}.Editor.Debug|Win64.Build.0 = Editor.Windows.Debug|x64
-		{BD22BB72-2610-45A6-A658-1C1B92EF7F0F}.Editor.Development|Win64.ActiveCfg = Editor.Windows.Development|x64
-		{BD22BB72-2610-45A6-A658-1C1B92EF7F0F}.Editor.Development|Win64.Build.0 = Editor.Windows.Development|x64
-		{BD22BB72-2610-45A6-A658-1C1B92EF7F0F}.Editor.Release|Win64.ActiveCfg = Editor.Windows.Release|x64
-		{BD22BB72-2610-45A6-A658-1C1B92EF7F0F}.Editor.Release|Win64.Build.0 = Editor.Windows.Release|x64
-		{BD22BB72-2610-45A6-A658-1C1B92EF7F0F}.Game.Debug|Win64.ActiveCfg = Game.Windows.Debug|x64
-		{BD22BB72-2610-45A6-A658-1C1B92EF7F0F}.Game.Debug|Win64.Build.0 = Game.Windows.Debug|x64
-		{BD22BB72-2610-45A6-A658-1C1B92EF7F0F}.Game.Development|Win64.ActiveCfg = Game.Windows.Development|x64
-		{BD22BB72-2610-45A6-A658-1C1B92EF7F0F}.Game.Development|Win64.Build.0 = Game.Windows.Development|x64
-		{BD22BB72-2610-45A6-A658-1C1B92EF7F0F}.Game.Release|Win64.ActiveCfg = Game.Windows.Release|x64
-		{BD22BB72-2610-45A6-A658-1C1B92EF7F0F}.Game.Release|Win64.Build.0 = Game.Windows.Release|x64
-		{BD22BB72-2610-45A6-A658-1C1B92EF7F0F}.Tests.Development|Win64.ActiveCfg = Editor.Windows.Debug|x64
 		{241847E8-A2C4-44C5-BE64-7C9E416FB67E}.Editor.Debug|Win64.ActiveCfg = Editor.Windows.Debug|x64
 		{241847E8-A2C4-44C5-BE64-7C9E416FB67E}.Editor.Development|Win64.ActiveCfg = Editor.Windows.Development|x64
 		{241847E8-A2C4-44C5-BE64-7C9E416FB67E}.Editor.Release|Win64.ActiveCfg = Editor.Windows.Release|x64
@@ -154,12 +115,9 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{75DDE40B-2F66-4D63-BBE8-08C781E04EE9} = {6C220ABF-A81E-4A74-B691-5F5E2353D228}
-		{647BD066-5C98-41DB-9F8F-6573086686D5} = {B6E18065-E002-4B69-8BC5-D9F16DA918EF}
 		{17382D0E-E739-470F-935E-FBF71FEFB337} = {6C220ABF-A81E-4A74-B691-5F5E2353D228}
 		{FDAA1569-72F5-4B6E-AB84-58F9A75B4D5E} = {75DDE40B-2F66-4D63-BBE8-08C781E04EE9}
 		{7740D7B4-16AF-4EEC-B36F-329A2AE02A2A} = {75DDE40B-2F66-4D63-BBE8-08C781E04EE9}
-		{3E8EA2D1-80FA-428A-9714-724E65C9D25E} = {647BD066-5C98-41DB-9F8F-6573086686D5}
-		{BD22BB72-2610-45A6-A658-1C1B92EF7F0F} = {647BD066-5C98-41DB-9F8F-6573086686D5}
 		{241847E8-A2C4-44C5-BE64-7C9E416FB67E} = {6C220ABF-A81E-4A74-B691-5F5E2353D228}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
