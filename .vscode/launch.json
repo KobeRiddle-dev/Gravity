@@ -179,15 +179,6 @@
 			"externalConsole": true
 		},
 		{
-			"type": "cppvsdbg",
-			"name": "Gravity (Attach Editor)",
-			"request": "attach",
-			"processId": "${command:pickProcess}",
-			"stopAtEntry": false,
-			"externalConsole": true,
-			"visualizerFile": "D:\\Game Projects\\Flax\\Flax Engine Custom Build Master Large Worlds\\FlaxEngine\\Source\\flax.natvis"
-		},
-		{
 			"type": "coreclr",
 			"name": "Gravity (C# Attach Editor)",
 			"request": "attach",

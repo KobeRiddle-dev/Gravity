@@ -1,30 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using FlaxEngine;
-
-
+﻿using FlaxEngine;
+using System.ComponentModel;
 
 #if USE_LARGE_WORLDS
 using Real = System.Double;
-using Mathr = FlaxEngine.Mathd;
-using System.Linq;
 #else
 using Real = System.float;
 using Mathr = FlaxEngine.Mathf;
 #endif
-
 
 namespace Gravity;
 
 /// <summary>
 /// BasicRigidBodyController Script.
 /// </summary>
-public class BasicRigidBodyController : GravitySourceTracker
+public class BasicRigidBodyController : GravityObject
 {
 
     /// <summary>
     /// Camera rotation smoothing factor
     /// </summary>
+    [DefaultValue(20.0f)]
     public float CameraSmoothing { get; set; } = 20.0f;
 
     /// <summary>
@@ -38,25 +33,14 @@ public class BasicRigidBodyController : GravitySourceTracker
     public Vector3 MaxFootAcceleration { get; set; } = Vector3.One * 1000;
 
     /// <summary>
-    /// Whether or not the character is in the gravity of a GravitySource
-    /// </summary>
-    [ReadOnly]
-    public bool IsInGravity
-    {
-        get
-        {
-            return this.GravitySources.Count > 0 || this.rigidBody.PhysicsScene.Gravity.Length > 0;
-        }
-    }
-
-    /// <summary>
     /// Whether or not the player's feet are touching the ground
     /// </summary>
+    [ShowInEditor]
     public bool IsGrounded
     {
         get
         {
-            return Physics.SphereCast(this.Actor.Position, 10, this.rigidBody.Transform.Down, maxDistance: 300);
+            return Physics.SphereCast(center: this.Actor.Position, radius: 5, direction: this.rigidBody.Transform.Down, maxDistance: 5);
         }
     }
 
@@ -69,7 +53,7 @@ public class BasicRigidBodyController : GravitySourceTracker
     // Prefab components
     // TODO: update with RequireChildActor attribute
 
-    private RigidBody rigidBody;
+    // private RigidBody rigidBody;
     private Collider collider;
 
     private Camera viewCamera;
@@ -102,8 +86,13 @@ public class BasicRigidBodyController : GravitySourceTracker
     public override void OnEnable()
     {
         SetUpCursor();
-
         // register for events
+    }
+
+    /// <inheritdoc/>
+    public override void OnDisable()
+    {
+        // unregister for events
     }
 
     private static void SetUpCursor()
@@ -114,37 +103,32 @@ public class BasicRigidBodyController : GravitySourceTracker
 
 
     /// <inheritdoc/>
-    public override void OnDisable()
-    {
-        // unregister for events
-    }
-
-    /// <inheritdoc/>
     public override void OnUpdate()
     {
     }
 
+    private Real averageYVelocity = 0;
+    private Real averageYAcceleration = 0;
+
+    private Real yVelocity;
     public override void OnFixedUpdate()
     {
         this.UpdateRotation();
         this.Move();
-    }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("Collision entered with: " + collision.OtherActor.TypeName);
-        GravitySource gravitySource = collision.OtherActor.FindScript<GravitySource>();
+        Real newAverageYVelocity = (this.averageYVelocity + this.rigidBody.LinearVelocity.Y) / 2;
 
-        if (gravitySource != null)
-            GravitySources.Add(gravitySource);
-    }
+        Real yAccelerationThisUpdate = (this.rigidBody.LinearVelocity.Y - this.yVelocity) / Time.DeltaTime;
+        Real newAverageYAcceleration = (this.averageYAcceleration + yAccelerationThisUpdate) / 2;
 
-    private void OnCollisionExit(Collision collision)
-    {
-        Debug.Log("Collision exited from: " + collision.OtherActor.TypeName);
-        GravitySource gravitySource = collision.OtherActor.FindScript<GravitySource>();
-        if (gravitySource != null)
-            GravitySources.Remove(gravitySource);
+        this.averageYVelocity = newAverageYVelocity;
+        this.averageYAcceleration = newAverageYAcceleration;
+        this.yVelocity = this.rigidBody.LinearVelocity.Y;
+
+        Debug.Log("Avg y velocity: " + this.averageYVelocity);
+        Debug.Log("Avg y acceleration: " + this.averageYAcceleration);
+
+
     }
 
     private void UpdateRotation()
@@ -178,60 +162,27 @@ public class BasicRigidBodyController : GravitySourceTracker
         {
             this.SelfRight();
         }
+
+        if (this.IsGrounded)
+            this.rigidBody.Constraints = RigidbodyConstraints.LockRotationX | RigidbodyConstraints.LockRotationZ;
+        else
+            this.rigidBody.Constraints &= RigidbodyConstraints.None;
     }
-
-
-    private void SelfRight()
-    {
-        Vector3 strongestGravitationalPull = this.GetStrongestGravitationalPull();
-
-        Vector3 gravityUp = -strongestGravitationalPull.Normalized;
-
-        float rightingStrength = 0.1f;
-        // if (this.isGrounded)
-        //     rightingStrength = 1;
-            
-        Quaternion rightedOrientation = Quaternion.GetRotationFromTo(this.Actor.Transform.Up, gravityUp, Vector3.Zero) * this.Actor.Orientation;
-
-        this.Actor.Orientation = Quaternion.Lerp(this.Actor.Orientation, rightedOrientation, rightingStrength);
-    }
-
-    private Vector3 GetStrongestGravitationalPull()
-    {
-        Vector3 strongestGravitationalPull = this.rigidBody.PhysicsScene.Gravity;
-
-        foreach (GravitySource gravitySource in this.GravitySources)
-        {
-            Vector3 fromGravitySourceToThis = gravitySource.Transform.Translation - this.Actor.Transform.Translation;
-
-            Real gravitationalForce = GravitySource.GRAVITATIONAL_CONSTANT * (this.rigidBody.Mass * gravitySource.Mass) / fromGravitySourceToThis.LengthSquared; // TODO: Make this a static function to get gravitational force
-
-            Vector3 acceleration = fromGravitySourceToThis.Normalized * gravitationalForce;
-
-            // Find body with strongest gravitational pull 
-            if (acceleration.LengthSquared > strongestGravitationalPull.LengthSquared)
-            {
-                strongestGravitationalPull = acceleration;
-            }
-        }
-
-        return strongestGravitationalPull;
-    }
-
 
     private void Move()
     {
         Vector3 movementDirection = GetMovementInputDirection();
-
         this.rigidBody.AddRelativeForce(movementDirection * this.MaxFootAcceleration, mode: ForceMode.Acceleration);
+
         if (this.rigidBody.LinearVelocity.Absolute.Length > this.MaxFootSpeed.Length)
             this.rigidBody.LinearVelocity = Vector3.Clamp(this.rigidBody.LinearVelocity, min: -this.MaxFootSpeed, max: this.MaxFootSpeed);
     }
 
+    /// <returns>the movement input direction, in local space</returns>
     private Vector3 GetMovementInputDirection()
     {
         Vector3 movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        movementDirection.Normalize();
+        // movementDirection.Normalize();
         // movementDirection = this.Actor.Transform.TransformDirection(movementDirection);
 
         return movementDirection;
