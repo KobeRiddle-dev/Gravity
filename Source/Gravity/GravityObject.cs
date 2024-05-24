@@ -80,7 +80,7 @@ public class GravityObject : Script
     public override void OnDebugDraw()
     {
         // Debug.Log("Drawing!");
-        DebugDraw.DrawRay(this.Actor.Position, this.GetStrongestGravitationalVector(), Color.PaleGreen);
+        DebugDraw.DrawRay(this.Actor.Position, this.GetStrongestGravitationalVector(), Color.PaleGreen, length: 20);
     }
     
     /// <summary>

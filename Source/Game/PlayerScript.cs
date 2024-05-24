@@ -161,7 +161,7 @@ public class PlayerScript : Script
     // accelDir: normalized direction that the player has requested to move (taking into account the movement keys and look direction)
     // prevVelocity: The current velocity of the player, before any additional calculations
     // accelerate: The server-defined player acceleration value
-    // maxVelocity: The server-defined maximum player velocity (this is not strictly adhered to due to strafejumping)
+    // maxVelocity: The server-defined maximum player velocity (this is not strictly adhered to due to strafe jumping)
     private Vector3 Accelerate(Vector3 accelDir, Vector3 prevVelocity, float accelerate, float maxVelocity)
     {
         float projVel = (float)Vector3.Dot(prevVelocity, accelDir); // Vector projection of Current velocity onto accelDir

@@ -19,12 +19,6 @@ public class Game : GameModule
     public override void Setup(BuildOptions options)
     {
         base.Setup(options);
-        options.PublicDependencies.Add("HideNSeekEditor");
-        options.PublicDependencies.Add("HideNSeek");
-        options.PublicDependencies.Add("HideNSeekEditor");
-        options.PublicDependencies.Add("HideNSeek");
-        options.PublicDependencies.Add("YAPCEditor");
-        options.PublicDependencies.Add("YAPC");
 
         options.ScriptingAPI.IgnoreMissingDocumentationWarnings = true;
 

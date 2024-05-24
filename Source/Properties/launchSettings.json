@@ -2,16 +2,16 @@
   "profiles": {
     "Gravity": {
       "commandName": "Executable",
-      "workingDirectory": "D:/Game Projects/Flax/Gravity",
-      "executablePath": "D:/Game Projects/Flax/Flax Engine Custom Build Master Large Worlds/FlaxEngine/Binaries/Editor/Win64/Development/FlaxEditor.exe",
-      "commandLineArgs": "-project \"D:/Game Projects/Flax/Gravity\"",
+      "workingDirectory": "C:/Game Dev/Flax Projects/Gravity",
+      "executablePath": "C:/Game Dev/Flax Projects/Flax-Large-Worlds/FlaxEngine/Binaries/Editor/Win64/Development/FlaxEditor.exe",
+      "commandLineArgs": "-project \"C:/Game Dev/Flax Projects/Gravity\"",
       "nativeDebugging": false
     },
     "Game": {
       "commandName": "Executable",
-      "workingDirectory": "D:/Game Projects/Flax/Gravity",
-      "executablePath": "D:/Game Projects/Flax/Flax Engine Custom Build Master Large Worlds/FlaxEngine/Binaries/Editor/Win64/Development/FlaxEditor.exe",
-      "commandLineArgs": "-project \"D:/Game Projects/Flax/Gravity\"",
+      "workingDirectory": "C:/Game Dev/Flax Projects/Gravity",
+      "executablePath": "C:/Game Dev/Flax Projects/Flax-Large-Worlds/FlaxEngine/Binaries/Editor/Win64/Development/FlaxEditor.exe",
+      "commandLineArgs": "-project \"C:/Game Dev/Flax Projects/Gravity\"",
       "nativeDebugging": false
     }
   }
