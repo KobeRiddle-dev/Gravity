@@ -20,7 +20,7 @@
     <AssemblyName>Game.CSharp</AssemblyName>
     <LangVersion>12.0</LangVersion>
     <FileAlignment>512</FileAlignment>
-    <CustomAfterMicrosoftCommonTargets>$(MSBuildThisFileDirectory)..\Cache\Projects\Flax.Build.CSharp.targets</CustomAfterMicrosoftCommonTargets>
+    <CustomAfterMicrosoftCommonTargets>$(MSBuildThisFileDirectory)..\Cache\Projects\Flax.Build.CSharp.SkipBuild.targets</CustomAfterMicrosoftCommonTargets>
     <RestorePackages>false</RestorePackages>
     <DisableFastUpToDateCheck>True</DisableFastUpToDateCheck>
   </PropertyGroup>
@@ -173,9 +173,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="FlaxEngine.CSharp">
-      <HintPath>..\..\Flax Engine Custom Build Master Large Worlds\FlaxEngine\Binaries\Editor\Win64\Development\FlaxEngine.CSharp.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\Cache\Projects\FlaxEngine.csproj">
+      <Project>{346AC87B-2B72-4DF5-853A-A2B56C4FBB6E}</Project>
+      <Name>FlaxEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Plugins\HideNSeek\Source\HideNSeekEditor.csproj">
+      <Project>{AA6C88F4-6087-4DE9-B13D-4BBC01FC014A}</Project>
+      <Name>HideNSeekEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Plugins\HideNSeek\Source\HideNSeek.csproj">
+      <Project>{F5B1A485-9048-405F-A268-3E610C7D4204}</Project>
+      <Name>HideNSeek</Name>
+    </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>

@@ -11,6 +11,16 @@
 					"Lightmap0": "1cb4879d4eeba57f8c616cb7ab698347",
 					"Lightmap1": "86596aaf4e4d27f75d9853941697651d",
 					"Lightmap2": "6d6fb9e449657605343c3fa7aa8a3469"
+				},
+				{
+					"Lightmap0": "7c52b9ff475c80564a4b0b9620e349cc",
+					"Lightmap1": "d5be4f8140450bc5ad4ff7a52e5fd1d7",
+					"Lightmap2": "eccc09ff4b2dff4037b6889b1cf2427f"
+				},
+				{
+					"Lightmap0": "d5c0a3fe42f393fdc96477ae034a149f",
+					"Lightmap1": "94e38d0344b21b308916449423daf174",
+					"Lightmap2": "00d3ccac4758c42181423da60f1b299c"
 				}
 			],
 			"LightmapSettings": {
@@ -40,6 +50,7 @@
 			"ID": "bc81376747666609b0974580a21519a1",
 			"TypeName": "FlaxEngine.Sky",
 			"ParentID": "28553d634087c67c711ebd96080482aa",
+			"IsActive": false,
 			"Name": "Sky",
 			"Transform": {
 				"Translation": {
@@ -48,8 +59,7 @@
 					"Z": 35.34806823730469
 				}
 			},
-			"Sun": "deecf0894777293a4f478dadacf2a6f8",
-			"SunPower": 10.0
+			"Sun": "deecf0894777293a4f478dadacf2a6f8"
 		},
 		{
 			"ID": "da5e1c454a56377517d41686ebb0348f",
@@ -69,6 +79,7 @@
 			"ID": "deecf0894777293a4f478dadacf2a6f8",
 			"TypeName": "FlaxEngine.DirectionalLight",
 			"ParentID": "28553d634087c67c711ebd96080482aa",
+			"IsActive": false,
 			"Name": "Directional Light",
 			"Transform": {
 				"Translation": {
@@ -94,6 +105,7 @@
 			"ID": "eb18e84d41670d6314174b89a1d5ffea",
 			"TypeName": "FlaxEngine.SkyLight",
 			"ParentID": "28553d634087c67c711ebd96080482aa",
+			"IsActive": false,
 			"Name": "SkyLight",
 			"Transform": {
 				"Translation": {
@@ -106,24 +118,51 @@
 			"Mode": 0
 		},
 		{
+			"ID": "ad532e5e4bf2e088fdbcf4b8f78aad4a",
+			"TypeName": "FlaxEngine.PointLight",
+			"ParentID": "28553d634087c67c711ebd96080482aa",
+			"Name": "SunLight",
+			"Transform": {
+				"Scale": {
+					"X": 100.0,
+					"Y": 100.0,
+					"Z": 100.0
+				}
+			},
+			"Color": {
+				"R": 0.95686274766922,
+				"G": 0.9137254953384399,
+				"B": 0.6078431606292725,
+				"A": 1.0
+			},
+			"Brightness": 50.0,
+			"CastVolumetricShadow": true,
+			"ShadowsDistance": 5000.0,
+			"ShadowsFadeDistance": 500.0,
+			"ShadowsDepthBias": 0.004999999888241291,
+			"Radius": 100000.0,
+			"SourceRadius": 1000.0
+		},
+		{
 			"ID": "22c499294afc2c3c69d4fc86a2e0a58b",
 			"TypeName": "FlaxEngine.RigidBody",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Name": "Test Planet1",
+			"Name": "Test Sun",
 			"Transform": {
-				"Translation": {
-					"X": 141.56321716308595,
-					"Y": 128.3096923828125,
-					"Z": 2167.5782470703127
+				"Orientation": {
+					"X": 0.0,
+					"Y": 0.3826834559440613,
+					"Z": 0.0,
+					"W": 0.9238795042037964
 				},
 				"Scale": {
-					"X": 10.0,
-					"Y": 10.0,
-					"Z": 10.0
+					"X": 100.0,
+					"Y": 100.0,
+					"Z": 100.0
 				}
 			},
 			"OverrideMass": true,
-			"Mass": 3670961815552.0,
+			"Mass": 367096122834944.0,
 			"EnableGravity": false
 		},
 		{
@@ -132,11 +171,11 @@
 			"ParentID": "22c499294afc2c3c69d4fc86a2e0a58b",
 			"V": {
 	"rigidBody": "22c499294afc2c3c69d4fc86a2e0a58b",
-	"GravitationalBoundCollider": "8009f91543070a56c84cc69b37a687ae",
-	"GForce": 0.9999999377192283,
-	"SurfaceGravity": 979.9999389648438,
-	"SurfaceRadius": 500.0,
-	"Mass": 3.6709618E+12,
+	"GravityVolume": "8009f91543070a56c84cc69b37a687ae",
+	"GForce": 0.9999998131576849,
+	"SurfaceGravity": 979.9998168945312,
+	"SurfaceRadius": 5000.0,
+	"Mass": 3.6709612E+14,
 	"UseRigidBodyMass": true
 }
 		},
@@ -144,13 +183,24 @@
 			"ID": "6637966a4d92ec55b6b7c6864961e599",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "22c499294afc2c3c69d4fc86a2e0a58b",
-			"Name": "Test Planet",
+			"Name": "SunModel",
 			"Model": "dd86c4724bf734c4959d23b3c74faa05",
+			"LightmapIndex": 1,
+			"LightmapArea": {
+				"Location": {
+					"X": 0.0029296875,
+					"Y": 0.0029296875
+				},
+				"Size": {
+					"X": 0.994140625,
+					"Y": 0.994140625
+				}
+			},
 			"Buffer": {
 				"Entries": [
 					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
+						"Material": "f8515e514417d34fd2f21f9b8a352936",
+						"ShadowsMode": 0,
 						"Visible": true,
 						"ReceiveDecals": true
 					}
@@ -162,8 +212,9 @@
 			"TypeName": "FlaxEngine.SphereCollider",
 			"ParentID": "22c499294afc2c3c69d4fc86a2e0a58b",
 			"Name": "GravityVolume",
+			"Layer": 2,
 			"IsTrigger": true,
-			"Radius": 100.0
+			"Radius": 1000.0
 		},
 		{
 			"ID": "cee3853e49c780afdb4fe4a6bd284769",
@@ -175,21 +226,21 @@
 			"ID": "153a50da4ca0e22133b0a980bd262a8b",
 			"TypeName": "FlaxEngine.RigidBody",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Name": "Test Planet2",
+			"Name": "Blue Planet",
 			"Transform": {
 				"Translation": {
-					"X": -2462.92236328125,
+					"X": -40602.921875,
 					"Y": 661.59423828125,
-					"Z": 820.1727905273438
+					"Z": -7509.8271484375
 				},
 				"Scale": {
-					"X": 3.0,
-					"Y": 3.0,
-					"Z": 3.0
+					"X": 50.0,
+					"Y": 50.0,
+					"Z": 50.0
 				}
 			},
 			"OverrideMass": true,
-			"Mass": 441000001536.0,
+			"Mass": 3670961815552.0,
 			"EnableGravity": false
 		},
 		{
@@ -198,19 +249,35 @@
 			"ParentID": "153a50da4ca0e22133b0a980bd262a8b",
 			"V": {
 	"rigidBody": "153a50da4ca0e22133b0a980bd262a8b",
-	"GravitationalBoundCollider": "ddd28a074429de4ce48affa948b337a9"
+	"GravityVolume": "ddd28a074429de4ce48affa948b337a9",
+	"GForce": 0.9999999377192283,
+	"SurfaceGravity": 979.9999389648438,
+	"SurfaceRadius": 500.0,
+	"Mass": 3.6709618E+12,
+	"UseRigidBodyMass": true
 }
 		},
 		{
 			"ID": "95621afe470eb7f660bdd9ac45e5d14c",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "153a50da4ca0e22133b0a980bd262a8b",
-			"Name": "Test Planet",
+			"Name": "Blue Planet Model",
 			"Model": "dd86c4724bf734c4959d23b3c74faa05",
+			"LightmapIndex": 0,
+			"LightmapArea": {
+				"Location": {
+					"X": 0.0029296875,
+					"Y": 0.0029296875
+				},
+				"Size": {
+					"X": 0.994140625,
+					"Y": 0.994140625
+				}
+			},
 			"Buffer": {
 				"Entries": [
 					{
-						"Material": "00000000000000000000000000000000",
+						"Material": "8391b6da40053a988a0959ab9f26f700",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
@@ -223,6 +290,7 @@
 			"TypeName": "FlaxEngine.SphereCollider",
 			"ParentID": "153a50da4ca0e22133b0a980bd262a8b",
 			"Name": "GravityVolume",
+			"Layer": 2,
 			"IsTrigger": true,
 			"Radius": 100.0
 		},
@@ -239,13 +307,13 @@
 			"Name": "FloorGravitySource",
 			"Transform": {
 				"Translation": {
-					"X": 0.0,
+					"X": -7470.0,
 					"Y": 0.0,
-					"Z": -640.0
+					"Z": 1890.0
 				}
 			},
 			"OverrideMass": true,
-			"Mass": 1468384768.0,
+			"Mass": 36709617664.0,
 			"LinearDamping": 0.0,
 			"EnableGravity": false
 		},
@@ -255,13 +323,16 @@
 			"ParentID": "cb1bc02d46b2fd50a724a7ae93afc034",
 			"V": {
 	"rigidBody": "cb1bc02d46b2fd50a724a7ae93afc034",
-	"GravitationalBoundCollider": "be61b53f400bfffa7a84d29a02f3ecb0",
+	"GravityVolume": "be61b53f400bfffa7a84d29a02f3ecb0",
+	"GForce": 0.9999999377192283,
 	"GravitationalDirection": {
 		"X": 0.0,
 		"Y": 1.0,
 		"Z": 0.0
 	},
-	"Mass": 1.4683848E+09,
+	"SurfaceGravity": 979.9999389648438,
+	"SurfaceRadius": 50.0,
+	"Mass": 3.6709618E+10,
 	"UseRigidBodyMass": true
 }
 		},
@@ -278,11 +349,11 @@
 				}
 			},
 			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
-			"LightmapIndex": 0,
+			"LightmapIndex": 2,
 			"LightmapArea": {
 				"Location": {
 					"X": 0.0029296875,
-					"Y": 0.0029296875
+					"Y": 0.1728515625
 				},
 				"Size": {
 					"X": 0.1669921875,
@@ -334,7 +405,9 @@
 					"Y": 20.0,
 					"Z": 10.0
 				}
-			}
+			},
+			"Layer": 2,
+			"IsTrigger": true
 		},
 		{
 			"ID": "5eb550944ce02a39e02c5c92555fd5e0",
@@ -343,11 +416,18 @@
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
 			"Transform": {
 				"Translation": {
-					"X": 0.0,
-					"Y": 1000.0,
-					"Z": -610.0
+					"X": -35070.33984375,
+					"Y": 1013.95751953125,
+					"Z": -4564.07080078125
+				},
+				"Orientation": {
+					"X": 0.004376420751214027,
+					"Y": -0.8370111584663391,
+					"Z": 0.006695174146443605,
+					"W": 0.547127366065979
 				}
 			},
+			"Layer": 1,
 			"Constraints": 0
 		},
 		{
@@ -361,20 +441,24 @@
 		"Y": 10000.0,
 		"Z": 10000.0
 	},
-	"RightingStrength": 0.1
+	"GroundLayers": {
+		"Mask": 1
+	}
 }
 		},
 		{
 			"ID": "733f26424865befb3f868fb7734a83de",
 			"PrefabID": "55c5cffe45137a8d25396eafbfe99c1f",
 			"PrefabObjectID": "f69371a448ba4face8ea7ebf1fcd07b9",
-			"ParentID": "5eb550944ce02a39e02c5c92555fd5e0"
+			"ParentID": "5eb550944ce02a39e02c5c92555fd5e0",
+			"Layer": 1
 		},
 		{
 			"ID": "e3a2554e4b5fd532b43aa0bafdb50fe4",
 			"PrefabID": "55c5cffe45137a8d25396eafbfe99c1f",
 			"PrefabObjectID": "0ec4e1574a52048f47808983b9dad528",
 			"ParentID": "5eb550944ce02a39e02c5c92555fd5e0",
+			"Layer": 1,
 			"Buffer": {
 				"Entries": [
 					{}
@@ -386,6 +470,18 @@
 			"PrefabID": "55c5cffe45137a8d25396eafbfe99c1f",
 			"PrefabObjectID": "30bef5da4baecb49ac024e816297c39b",
 			"ParentID": "5eb550944ce02a39e02c5c92555fd5e0",
+			"Layer": 1,
+			"LightmapIndex": 2,
+			"LightmapArea": {
+				"Location": {
+					"X": 0.1396484375,
+					"Y": 0.3427734375
+				},
+				"Size": {
+					"X": 0.0087890625,
+					"Y": 0.0087890625
+				}
+			},
 			"Buffer": {
 				"Entries": [
 					{}
@@ -396,13 +492,124 @@
 			"ID": "4c20c4134cbec8ce99a0c69117e73878",
 			"PrefabID": "55c5cffe45137a8d25396eafbfe99c1f",
 			"PrefabObjectID": "cbd112e94a2e387b4a186080a47d852d",
-			"ParentID": "efc4015240dd1cc69ecf63aa3d338223"
+			"ParentID": "efc4015240dd1cc69ecf63aa3d338223",
+			"Layer": 1
 		},
 		{
 			"ID": "8e4e6bc1432fdd3dab9997b7a9022535",
 			"PrefabID": "55c5cffe45137a8d25396eafbfe99c1f",
 			"PrefabObjectID": "6f78cd18404bcb5d84a4bf91af5b5367",
-			"ParentID": "efc4015240dd1cc69ecf63aa3d338223"
+			"ParentID": "efc4015240dd1cc69ecf63aa3d338223",
+			"Layer": 1
+		},
+		{
+			"ID": "4be647e44aedab3c800b18a4584ac63a",
+			"TypeName": "FlaxEngine.UICanvas",
+			"ParentID": "5eb550944ce02a39e02c5c92555fd5e0",
+			"Name": "PlayerUI",
+			"Layer": 1,
+			"V": {}
+		},
+		{
+			"ID": "363981db40e9496974ec72aef632ffa2",
+			"TypeName": "FlaxEngine.UIControl",
+			"ParentID": "4be647e44aedab3c800b18a4584ac63a",
+			"Name": "Canvas Scalar",
+			"Layer": 1,
+			"Control": "FlaxEngine.GUI.CanvasScaler",
+			"Data": {
+	"ResolutionCurve": {
+		"Keyframes": [
+			{
+				"Time": 480.0,
+				"Value": 0.444
+			},
+			{
+				"Time": 720.0,
+				"Value": 0.666
+			},
+			{
+				"Time": 1080.0,
+				"Value": 1.0
+			},
+			{
+				"Time": 8640.0,
+				"Value": 8.0
+			}
+		]
+	},
+	"DpiCurve": {
+		"Keyframes": [
+			{
+				"Time": 1.0,
+				"Value": 1.0
+			},
+			{
+				"Time": 96.0,
+				"Value": 1.0
+			},
+			{
+				"Time": 200.0,
+				"Value": 2.0
+			},
+			{
+				"Time": 400.0,
+				"Value": 4.0
+			}
+		]
+	},
+	"Scaling": 0,
+	"ScaleFactor": 1.0,
+	"PhysicalUnit": 3,
+	"PhysicalUnitSize": 1.0,
+	"ResolutionMode": 0,
+	"ResolutionMin": {
+		"X": 640.0,
+		"Y": 480.0
+	},
+	"ResolutionMax": {
+		"X": 7680.0,
+		"Y": 4320.0
+	},
+	"ClipChildren": true,
+	"CullChildren": true,
+	"AnchorMin": {
+		"X": 0.0,
+		"Y": 0.0
+	},
+	"AnchorMax": {
+		"X": 1.0,
+		"Y": 1.0
+	},
+	"Offsets": {
+		"Left": 0.0,
+		"Right": 0.0,
+		"Top": 0.0,
+		"Bottom": 0.0
+	},
+	"Scale": {
+		"X": 1.0,
+		"Y": 1.0
+	},
+	"Pivot": {
+		"X": 0.5,
+		"Y": 0.5
+	},
+	"Shear": {
+		"X": 0.0,
+		"Y": 0.0
+	},
+	"Rotation": 0.0,
+	"BackgroundColor": {
+		"R": 0.0,
+		"G": 0.0,
+		"B": 0.0,
+		"A": 0.0
+	},
+	"Enabled": true,
+	"Visible": true,
+	"AutoFocus": false
+}
 		},
 		{
 			"ID": "8e44bb244c138bcc8dd4b3a13e420082",
@@ -411,9 +618,9 @@
 			"Name": "Cube",
 			"Transform": {
 				"Translation": {
-					"X": 0.0,
+					"X": -8140.0,
 					"Y": 406.12335205078127,
-					"Z": -604.25341796875
+					"Z": -3184.25341796875
 				}
 			},
 			"OverrideMass": true,
@@ -425,11 +632,11 @@
 			"ParentID": "8e44bb244c138bcc8dd4b3a13e420082",
 			"Name": "Cube",
 			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
-			"LightmapIndex": 0,
+			"LightmapIndex": 2,
 			"LightmapArea": {
 				"Location": {
 					"X": 0.0302734375,
-					"Y": 0.1728515625
+					"Y": 0.3427734375
 				},
 				"Size": {
 					"X": 0.0244140625,
@@ -460,9 +667,9 @@
 			"Name": "TestGravityObject 1",
 			"Transform": {
 				"Translation": {
-					"X": 311.2208251953125,
+					"X": -8098.779296875,
 					"Y": 433.3966064453125,
-					"Z": 573.3897705078125
+					"Z": -1876.6102294921876
 				}
 			},
 			"Mass": 259.1523132324219
@@ -489,6 +696,17 @@
 			"ParentID": "d496badf41226683373a12a79b21ad25",
 			"Name": "Cone",
 			"Model": "1b4a643d44706750b2e35ea4e11e3663",
+			"LightmapIndex": 2,
+			"LightmapArea": {
+				"Location": {
+					"X": 0.0576171875,
+					"Y": 0.3427734375
+				},
+				"Size": {
+					"X": 0.0244140625,
+					"Y": 0.0244140625
+				}
+			},
 			"Buffer": {
 				"Entries": [
 					{
@@ -507,9 +725,9 @@
 			"Name": "TestGravityObject 2",
 			"Transform": {
 				"Translation": {
-					"X": 787.8161010742188,
+					"X": -7622.18408203125,
 					"Y": 433.3966064453125,
-					"Z": 573.3897705078125
+					"Z": -1876.6102294921876
 				}
 			},
 			"Mass": 259.1523132324219
@@ -536,6 +754,17 @@
 			"ParentID": "87fa7b9f4a8ae151c3a6a9954f5214a4",
 			"Name": "Cone",
 			"Model": "1b4a643d44706750b2e35ea4e11e3663",
+			"LightmapIndex": 2,
+			"LightmapArea": {
+				"Location": {
+					"X": 0.0849609375,
+					"Y": 0.3427734375
+				},
+				"Size": {
+					"X": 0.0244140625,
+					"Y": 0.0244140625
+				}
+			},
 			"Buffer": {
 				"Entries": [
 					{
@@ -554,9 +783,9 @@
 			"Name": "TestGravityObject 3",
 			"Transform": {
 				"Translation": {
-					"X": 785.88720703125,
-					"Y": 433.3966064453125,
-					"Z": 1175.236328125
+					"X": -7624.11279296875,
+					"Y": 683.3966064453125,
+					"Z": -1274.763671875
 				}
 			},
 			"Mass": 259.1523132324219
@@ -583,6 +812,17 @@
 			"ParentID": "f16aa88d46b4e743553b2b9aa9d170cc",
 			"Name": "Cone",
 			"Model": "1b4a643d44706750b2e35ea4e11e3663",
+			"LightmapIndex": 2,
+			"LightmapArea": {
+				"Location": {
+					"X": 0.1123046875,
+					"Y": 0.3427734375
+				},
+				"Size": {
+					"X": 0.0244140625,
+					"Y": 0.0244140625
+				}
+			},
 			"Buffer": {
 				"Entries": [
 					{
@@ -601,9 +841,9 @@
 			"Name": "TestGravityObject 4",
 			"Transform": {
 				"Translation": {
-					"X": 1063.6292724609376,
+					"X": -7346.37060546875,
 					"Y": 433.3966064453125,
-					"Z": 1175.236328125
+					"Z": -1274.763671875
 				}
 			},
 			"Mass": 259.1523132324219
@@ -630,6 +870,17 @@
 			"ParentID": "26281a0e449a39289cdce5a77499135b",
 			"Name": "Cone",
 			"Model": "1b4a643d44706750b2e35ea4e11e3663",
+			"LightmapIndex": 2,
+			"LightmapArea": {
+				"Location": {
+					"X": 0.0029296875,
+					"Y": 0.3427734375
+				},
+				"Size": {
+					"X": 0.0244140625,
+					"Y": 0.0244140625
+				}
+			},
 			"Buffer": {
 				"Entries": [
 					{
@@ -648,9 +899,9 @@
 			"Name": "Floor",
 			"Transform": {
 				"Translation": {
-					"X": 0.0,
+					"X": -7290.0,
 					"Y": 540.0,
-					"Z": -2110.0
+					"Z": -3040.0
 				}
 			},
 			"OverrideMass": true,
@@ -670,7 +921,7 @@
 				}
 			},
 			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
-			"LightmapIndex": 0,
+			"LightmapIndex": 2,
 			"LightmapArea": {
 				"Location": {
 					"X": 0.0029296875,

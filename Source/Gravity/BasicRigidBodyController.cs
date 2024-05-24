@@ -1,4 +1,5 @@
-﻿using FlaxEngine;
+﻿using FlaxEditor.Surface.Archetypes;
+using FlaxEngine;
 using System.ComponentModel;
 
 #if USE_LARGE_WORLDS
@@ -32,6 +33,9 @@ public class BasicRigidBodyController : GravityObject
     /// </summary>
     public Vector3 MaxFootAcceleration { get; set; } = Vector3.One * 1000;
 
+    // Layers upon which the controller will be considered grounded
+    public LayersMask GroundLayers { get; set; }
+
     /// <summary>
     /// Whether or not the player's feet are touching the ground
     /// </summary>
@@ -40,7 +44,7 @@ public class BasicRigidBodyController : GravityObject
     {
         get
         {
-            return Physics.SphereCast(center: this.Actor.Position, radius: 5, direction: this.rigidBody.Transform.Down, maxDistance: 5);
+            return Physics.SphereCast(center: this.Actor.Position, radius: 5, direction: this.RigidBody.Transform.Down, layerMask: this.GroundLayers,maxDistance: 5);
         }
     }
 
@@ -66,7 +70,7 @@ public class BasicRigidBodyController : GravityObject
     {
         // Here you can add code that needs to be called when script is created, just before the first game update
 
-        this.rigidBody = this.Actor.As<RigidBody>();
+        this.RigidBody = this.Actor.As<RigidBody>();
         this.collider = this.Actor.GetChild<Collider>();
         this.viewCamera = this.Actor.GetChild<Camera>();
 
@@ -107,28 +111,10 @@ public class BasicRigidBodyController : GravityObject
     {
     }
 
-    private Real averageYVelocity = 0;
-    private Real averageYAcceleration = 0;
-
-    private Real yVelocity;
     public override void OnFixedUpdate()
     {
         this.UpdateRotation();
         this.Move();
-
-        Real newAverageYVelocity = (this.averageYVelocity + this.rigidBody.LinearVelocity.Y) / 2;
-
-        Real yAccelerationThisUpdate = (this.rigidBody.LinearVelocity.Y - this.yVelocity) / Time.DeltaTime;
-        Real newAverageYAcceleration = (this.averageYAcceleration + yAccelerationThisUpdate) / 2;
-
-        this.averageYVelocity = newAverageYVelocity;
-        this.averageYAcceleration = newAverageYAcceleration;
-        this.yVelocity = this.rigidBody.LinearVelocity.Y;
-
-        Debug.Log("Avg y velocity: " + this.averageYVelocity);
-        Debug.Log("Avg y acceleration: " + this.averageYAcceleration);
-
-
     }
 
     private void UpdateRotation()
@@ -156,35 +142,38 @@ public class BasicRigidBodyController : GravityObject
 
     private void RotateBody(float rotationFactor)
     {
-        this.Actor.Orientation = Quaternion.Lerp(this.Actor.Orientation, Quaternion.Euler(0, this.yaw, 0), rotationFactor);
 
-        if (this.IsInGravity)
+        Real strongestAcceleration = this.GetStrongestGravitationalVector(out Real sourceMass).Length / sourceMass;
+        Debug.Log("strongestAcceleration " + strongestAcceleration);
+        if (this.IsInGravity && strongestAcceleration > 1) // FIXME: This condition is borked.
         {
             this.SelfRight();
         }
+        else
+        {
+            this.Actor.Orientation = Quaternion.Lerp(this.Actor.Orientation, Quaternion.Euler(this.pitch, 0, this.roll), rotationFactor);
+        }
+        this.Actor.Orientation = Quaternion.Lerp(this.Actor.Orientation, Quaternion.Euler(0, this.yaw, 0), rotationFactor);
 
         if (this.IsGrounded)
-            this.rigidBody.Constraints = RigidbodyConstraints.LockRotationX | RigidbodyConstraints.LockRotationZ;
+            this.RigidBody.Constraints = RigidbodyConstraints.LockRotationX | RigidbodyConstraints.LockRotationZ;
         else
-            this.rigidBody.Constraints &= RigidbodyConstraints.None;
+            this.RigidBody.Constraints &= RigidbodyConstraints.None;
     }
 
     private void Move()
     {
         Vector3 movementDirection = GetMovementInputDirection();
-        this.rigidBody.AddRelativeForce(movementDirection * this.MaxFootAcceleration, mode: ForceMode.Acceleration);
+        this.RigidBody.AddRelativeForce(movementDirection * this.MaxFootAcceleration, mode: ForceMode.Acceleration);
 
-        if (this.rigidBody.LinearVelocity.Absolute.Length > this.MaxFootSpeed.Length)
-            this.rigidBody.LinearVelocity = Vector3.Clamp(this.rigidBody.LinearVelocity, min: -this.MaxFootSpeed, max: this.MaxFootSpeed);
+        if (this.RigidBody.LinearVelocity.Absolute.Length > this.MaxFootSpeed.Length)
+            this.RigidBody.LinearVelocity = Vector3.Clamp(this.RigidBody.LinearVelocity, min: -this.MaxFootSpeed, max: this.MaxFootSpeed);
     }
 
     /// <returns>the movement input direction, in local space</returns>
     private Vector3 GetMovementInputDirection()
     {
         Vector3 movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        // movementDirection.Normalize();
-        // movementDirection = this.Actor.Transform.TransformDirection(movementDirection);
-
         return movementDirection;
     }
 }
