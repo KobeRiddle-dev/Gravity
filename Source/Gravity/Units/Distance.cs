@@ -1,12 +1,12 @@
 #if USE_LARGE_WORLDS
 using Real = System.Double;
 using Mathr = FlaxEngine.Mathd;
-using System.Diagnostics.Contracts;
 #else
 using Real = System.float;
 using Mathr = FlaxEngine.Mathf;
 #endif
 
+namespace Gravity.Gravity.Units;
 struct Distance(Real centimeters)
 {
     public const Real MetersPerKilometer = 1000;
