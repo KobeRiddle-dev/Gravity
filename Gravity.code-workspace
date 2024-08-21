@@ -6,7 +6,10 @@
 		"jake.autoDetect": "off",
 		"grunt.autoDetect": "off",
 		"omnisharp.useModernNet": true,
-		"dotnet.defaultSolution": "Gravity.sln"
+		"dotnet.defaultSolution": "Gravity.sln",
+		"cSpell.words": [
+			"Deinitialize"
+		]
 	},
 	"folders": [
 		{
