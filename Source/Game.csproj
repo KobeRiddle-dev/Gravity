@@ -20,7 +20,7 @@
     <AssemblyName>Game.CSharp</AssemblyName>
     <LangVersion>12.0</LangVersion>
     <FileAlignment>512</FileAlignment>
-    <CustomAfterMicrosoftCommonTargets>$(MSBuildThisFileDirectory)..\Cache\Projects\Flax.Build.CSharp.targets</CustomAfterMicrosoftCommonTargets>
+    <CustomAfterMicrosoftCommonTargets>$(MSBuildThisFileDirectory)..\Cache\Projects\Flax.Build.CSharp.SkipBuild.targets</CustomAfterMicrosoftCommonTargets>
     <RestorePackages>false</RestorePackages>
     <DisableFastUpToDateCheck>True</DisableFastUpToDateCheck>
   </PropertyGroup>
@@ -173,9 +173,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="FlaxEngine.CSharp">
-      <HintPath>..\..\Flax-Large-Worlds\FlaxEngine\Binaries\Editor\Win64\Development\FlaxEngine.CSharp.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\Cache\Projects\FlaxEngine.csproj">
+      <Project>{9754AA84-045D-4AFA-B10E-76415F4768A4}</Project>
+      <Name>FlaxEngine</Name>
+    </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>

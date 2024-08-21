@@ -11,33 +11,6 @@
         "runtime": {
           "bin/placeholder/FlaxEngine.CSharp.dll": {}
         }
-      },
-      "HideNSeek.CSharp/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "FlaxEngine.CSharp": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/HideNSeek.CSharp.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/HideNSeek.CSharp.dll": {}
-        }
-      },
-      "HideNSeekEditor.CSharp/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "FlaxEngine.CSharp": "1.0.0",
-          "HideNSeek.CSharp": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/HideNSeekEditor.CSharp.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/HideNSeekEditor.CSharp.dll": {}
-        }
       }
     }
   },
@@ -46,66 +19,40 @@
       "type": "project",
       "path": "../Cache/Projects/FlaxEngine.csproj",
       "msbuildProject": "../Cache/Projects/FlaxEngine.csproj"
-    },
-    "HideNSeek.CSharp/1.0.0": {
-      "type": "project",
-      "path": "../Plugins/HideNSeek/Source/HideNSeek.csproj",
-      "msbuildProject": "../Plugins/HideNSeek/Source/HideNSeek.csproj"
-    },
-    "HideNSeekEditor.CSharp/1.0.0": {
-      "type": "project",
-      "path": "../Plugins/HideNSeek/Source/HideNSeekEditor.csproj",
-      "msbuildProject": "../Plugins/HideNSeek/Source/HideNSeekEditor.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "FlaxEngine.CSharp >= 1.0.0",
-      "HideNSeek.CSharp >= 1.0.0",
-      "HideNSeekEditor.CSharp >= 1.0.0"
+      "FlaxEngine.CSharp >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kober\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\kober\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Game Projects\\Flax\\Gravity\\Source\\Game.csproj",
-      "projectName": "Game.CSharp",
-      "projectPath": "D:\\Game Projects\\Flax\\Gravity\\Source\\Game.csproj",
+      "projectUniqueName": "C:\\Game Dev\\Flax Projects\\Gravity\\Source\\Gravity.csproj",
+      "projectName": "Gravity.CSharp",
+      "projectPath": "C:\\Game Dev\\Flax Projects\\Gravity\\Source\\Gravity.csproj",
       "packagesPath": "C:\\Users\\kober\\.nuget\\packages\\",
-      "outputPath": "D:\\Game Projects\\Flax\\Gravity\\Source\\obj\\",
+      "outputPath": "C:\\Game Dev\\Flax Projects\\Gravity\\Source\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\kober\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\kober\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Game Projects\\Flax\\Gravity\\Cache\\Projects\\FlaxEngine.csproj": {
-              "projectPath": "D:\\Game Projects\\Flax\\Gravity\\Cache\\Projects\\FlaxEngine.csproj"
-            },
-            "D:\\Game Projects\\Flax\\Gravity\\Plugins\\HideNSeek\\Source\\HideNSeek.csproj": {
-              "projectPath": "D:\\Game Projects\\Flax\\Gravity\\Plugins\\HideNSeek\\Source\\HideNSeek.csproj"
-            },
-            "D:\\Game Projects\\Flax\\Gravity\\Plugins\\HideNSeek\\Source\\HideNSeekEditor.csproj": {
-              "projectPath": "D:\\Game Projects\\Flax\\Gravity\\Plugins\\HideNSeek\\Source\\HideNSeekEditor.csproj"
+            "C:\\Game Dev\\Flax Projects\\Gravity\\Cache\\Projects\\FlaxEngine.csproj": {
+              "projectPath": "C:\\Game Dev\\Flax Projects\\Gravity\\Cache\\Projects\\FlaxEngine.csproj"
             }
           }
         }
@@ -114,6 +61,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -135,7 +87,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.104/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

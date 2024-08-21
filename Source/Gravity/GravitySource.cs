@@ -25,7 +25,12 @@ public class GravitySource : Script
     /// The Newtonian Constant of Gravitation G, in units cm^3/(kg*s^2)
     /// </summary>
     [ShowInEditor]
-    public const Real GRAVITATIONAL_CONSTANT = 6.674E-5;
+    public const Real GRAVITATIONAL_CONSTANT_CENTIMETERS = 6.674E-5;
+
+    /// <summary>
+    /// The Newtonian Constant of Gravitation G, in standard SI units m^3/(kg*s^2)
+    /// </summary>
+    public const Real GRAVITATIONAL_CONSTANT = 6.67408E-11;
 
     /**************/
     /* Properties */
@@ -72,14 +77,12 @@ public class GravitySource : Script
     {
         get
         {
-            if (this.UseRigidBodyMass && this.rigidBody != null)
+            if (this.UseRigidBodyMass && this.rigidBody != null && this.mass != this.rigidBody.Mass)
             {
-                if (this.mass != this.rigidBody.Mass)
-                {
-                    this.mass = this.rigidBody.Mass;
-                    this.UpdateGravityBasedOnMass();
-                }
+                this.mass = this.rigidBody.Mass;
+                this.UpdateGravityBasedOnMass();
             }
+
             return mass;
         }
         set

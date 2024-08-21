@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Game Projects\\Flax\\Gravity\\Source\\Game.csproj": {}
+    "C:\\Game Dev\\Flax Projects\\Gravity\\Source\\Game.csproj": {}
   },
   "projects": {
-    "D:\\Game Projects\\Flax\\Gravity\\Cache\\Projects\\FlaxEngine.csproj": {
+    "C:\\Game Dev\\Flax Projects\\Gravity\\Source\\Game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Game Projects\\Flax\\Gravity\\Cache\\Projects\\FlaxEngine.csproj",
-        "projectName": "FlaxEngine.CSharp",
-        "projectPath": "D:\\Game Projects\\Flax\\Gravity\\Cache\\Projects\\FlaxEngine.csproj",
+        "projectUniqueName": "C:\\Game Dev\\Flax Projects\\Gravity\\Source\\Game.csproj",
+        "projectName": "Game.CSharp",
+        "projectPath": "C:\\Game Dev\\Flax Projects\\Gravity\\Source\\Game.csproj",
         "packagesPath": "C:\\Users\\kober\\.nuget\\packages\\",
-        "outputPath": "D:\\Game Projects\\Flax\\Gravity\\Cache\\Projects\\obj\\",
+        "outputPath": "C:\\Game Dev\\Flax Projects\\Gravity\\Source\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\kober\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\kober\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -60,208 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.104/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\Game Projects\\Flax\\Gravity\\Plugins\\HideNSeek\\Source\\HideNSeek.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Game Projects\\Flax\\Gravity\\Plugins\\HideNSeek\\Source\\HideNSeek.csproj",
-        "projectName": "HideNSeek.CSharp",
-        "projectPath": "D:\\Game Projects\\Flax\\Gravity\\Plugins\\HideNSeek\\Source\\HideNSeek.csproj",
-        "packagesPath": "C:\\Users\\kober\\.nuget\\packages\\",
-        "outputPath": "D:\\Game Projects\\Flax\\Gravity\\Plugins\\HideNSeek\\Source\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\kober\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "D:\\Game Projects\\Flax\\Gravity\\Cache\\Projects\\FlaxEngine.csproj": {
-                "projectPath": "D:\\Game Projects\\Flax\\Gravity\\Cache\\Projects\\FlaxEngine.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.104/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\Game Projects\\Flax\\Gravity\\Plugins\\HideNSeek\\Source\\HideNSeekEditor.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Game Projects\\Flax\\Gravity\\Plugins\\HideNSeek\\Source\\HideNSeekEditor.csproj",
-        "projectName": "HideNSeekEditor.CSharp",
-        "projectPath": "D:\\Game Projects\\Flax\\Gravity\\Plugins\\HideNSeek\\Source\\HideNSeekEditor.csproj",
-        "packagesPath": "C:\\Users\\kober\\.nuget\\packages\\",
-        "outputPath": "D:\\Game Projects\\Flax\\Gravity\\Plugins\\HideNSeek\\Source\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\kober\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "D:\\Game Projects\\Flax\\Gravity\\Cache\\Projects\\FlaxEngine.csproj": {
-                "projectPath": "D:\\Game Projects\\Flax\\Gravity\\Cache\\Projects\\FlaxEngine.csproj"
-              },
-              "D:\\Game Projects\\Flax\\Gravity\\Plugins\\HideNSeek\\Source\\HideNSeek.csproj": {
-                "projectPath": "D:\\Game Projects\\Flax\\Gravity\\Plugins\\HideNSeek\\Source\\HideNSeek.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.104/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\Game Projects\\Flax\\Gravity\\Source\\Game.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Game Projects\\Flax\\Gravity\\Source\\Game.csproj",
-        "projectName": "Game.CSharp",
-        "projectPath": "D:\\Game Projects\\Flax\\Gravity\\Source\\Game.csproj",
-        "packagesPath": "C:\\Users\\kober\\.nuget\\packages\\",
-        "outputPath": "D:\\Game Projects\\Flax\\Gravity\\Source\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\kober\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "D:\\Game Projects\\Flax\\Gravity\\Cache\\Projects\\FlaxEngine.csproj": {
-                "projectPath": "D:\\Game Projects\\Flax\\Gravity\\Cache\\Projects\\FlaxEngine.csproj"
-              },
-              "D:\\Game Projects\\Flax\\Gravity\\Plugins\\HideNSeek\\Source\\HideNSeek.csproj": {
-                "projectPath": "D:\\Game Projects\\Flax\\Gravity\\Plugins\\HideNSeek\\Source\\HideNSeek.csproj"
-              },
-              "D:\\Game Projects\\Flax\\Gravity\\Plugins\\HideNSeek\\Source\\HideNSeekEditor.csproj": {
-                "projectPath": "D:\\Game Projects\\Flax\\Gravity\\Plugins\\HideNSeek\\Source\\HideNSeekEditor.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.104/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
