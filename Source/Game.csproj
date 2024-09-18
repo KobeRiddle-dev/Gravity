@@ -177,6 +177,14 @@
       <Project>{9754AA84-045D-4AFA-B10E-76415F4768A4}</Project>
       <Name>FlaxEngine</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Plugins\HideNSeek\Source\HideNSeek.csproj">
+      <Project>{B9AF9F89-4364-4F60-836B-4B9B0BB8D519}</Project>
+      <Name>HideNSeek</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Plugins\GravityTools\Source\GravityTools.csproj">
+      <Project>{C451FDDF-E7BE-458C-9697-36D493AC6EAE}</Project>
+      <Name>GravityTools</Name>
+    </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>

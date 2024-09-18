@@ -11,6 +11,19 @@
         "runtime": {
           "bin/placeholder/FlaxEngine.CSharp.dll": {}
         }
+      },
+      "GravityTools.CSharp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "FlaxEngine.CSharp": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GravityTools.CSharp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GravityTools.CSharp.dll": {}
+        }
       }
     }
   },
@@ -19,11 +32,17 @@
       "type": "project",
       "path": "../Cache/Projects/FlaxEngine.csproj",
       "msbuildProject": "../Cache/Projects/FlaxEngine.csproj"
+    },
+    "GravityTools.CSharp/1.0.0": {
+      "type": "project",
+      "path": "../Plugins/GravityTools/Source/GravityTools.csproj",
+      "msbuildProject": "../Plugins/GravityTools/Source/GravityTools.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "FlaxEngine.CSharp >= 1.0.0"
+      "FlaxEngine.CSharp >= 1.0.0",
+      "GravityTools.CSharp >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -39,12 +58,14 @@
       "outputPath": "C:\\Game Dev\\Flax Projects\\Gravity\\Source\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kober\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\kober\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -53,6 +74,9 @@
           "projectReferences": {
             "C:\\Game Dev\\Flax Projects\\Gravity\\Cache\\Projects\\FlaxEngine.csproj": {
               "projectPath": "C:\\Game Dev\\Flax Projects\\Gravity\\Cache\\Projects\\FlaxEngine.csproj"
+            },
+            "C:\\Game Dev\\Flax Projects\\Gravity\\Plugins\\GravityTools\\Source\\GravityTools.csproj": {
+              "projectPath": "C:\\Game Dev\\Flax Projects\\Gravity\\Plugins\\GravityTools\\Source\\GravityTools.csproj"
             }
           }
         }
